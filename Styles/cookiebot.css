@@ -1,0 +1,105 @@
+/* cookiebot css */
+#cookie-msg {
+    position: fixed;
+    bottom: 230px;
+    right: -400px;
+    width: 95%;
+    max-width: 350px;
+    text-align: center;
+    padding: 20px 16px 20px 35px;
+    background-color: rgba(70,70,70,1);
+    color: #fff;
+    font-size: 15px;
+    line-height: 24px;
+    -webkit-box-shadow: -10px -4px 20px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: -10px -4px 20px 0px rgba(0,0,0,0.35);
+    box-shadow: -10px -4px 20px 0px rgba(0,0,0,0.35);
+    -webkit-transition: all .75s ease;
+    -moz-transition: all .75s ease;
+    -o-transition: all .75s ease;
+    -ms-transition: all .75s ease;
+    transition: all .75s ease;
+    z-index: 1000;
+}
+    #cookie-msg p {
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    #cookie-msg.onscreen {
+        right: 0;
+    }
+    #cookie-msg a.btn-aceptar {
+        color: rgba(70,70,70,1);
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgba(70,70,70,1);
+        font-size: 11px;
+        display: none;
+    }
+    #cookie-msg a {
+        color: rgb(0,0,0);
+        background: #fff;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        padding: 5px;
+        text-decoration: none;
+        display: inline-block;
+        width: 130px;
+    }
+    #cookie-msg .sidebar {
+        position: absolute;
+        top: 66px;
+        left: -46px;
+        color: #fff;
+        font-weight: 700;
+        transform: rotate(-90deg);
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+a.btn-accept {
+    margin-left: 15px;
+}
+
+
+@media only screen and (min-width:768px) {
+    #cookie-msg {
+        bottom: -150px;
+        right: auto;
+        left: 0;
+        width: 50vw;
+        max-width: none;
+        padding: 20px;
+        -webkit-box-shadow: 10px -4px 20px 0px rgba(0,0,0,0.35);
+        -moz-box-shadow: 10px -4px 20px 0px rgba(0,0,0,0.35);
+        box-shadow: 10px -4px 20px 0px rgba(0,0,0,0.35);
+    }
+        #cookie-msg p {
+            width: 90%;
+            max-width: 435px;
+        }
+        #cookie-msg .sidebar {
+            display: none;
+        }
+        #cookie-msg.onscreen {
+            bottom: 0;
+        }
+}
+
+@media only screen and (min-width:1000px) {
+    #cookie-msg {
+        width: calc(90vw - 350px)
+    }
+}
+
+@media only screen and (min-width:1500px) {
+    #cookie-msg p {
+        max-width: none;
+    }
+}

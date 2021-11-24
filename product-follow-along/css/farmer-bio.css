@@ -1,0 +1,87 @@
+﻿section#pfa {
+    background-color: #FFF;
+    clip-path: ellipse(142% 100% at 50% 100%);
+}
+.pfa-holder {
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+.mobile-pfa-holder {
+    min-height: 265px;
+    background-size: cover;
+    background-position-y: -30px;
+}
+section.non-arch {
+    padding-bottom: 5em;
+}
+#breadCrumbs ul {
+    font-weight: bold;
+    list-style: none;
+    padding: 0;
+}
+    #breadCrumbs ul li {
+        display: inline;
+    }
+        #breadCrumbs ul li a {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #000;
+        }
+            #breadCrumbs ul li a:hover {
+                text-decoration: none;
+            }
+.farmer-bio {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.farmer-img {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 268px;
+    padding: 10px;
+}
+    .farmer-img img {
+        border-radius: 50%;
+    }
+.farmer-content {
+    padding: 1.5em;
+}
+    .farmer-content p {
+        margin: 0;
+    }
+#farmerBlogs h2 {
+    margin-bottom: 2em;
+}
+.blog-post {
+    display: grid;
+    grid-template-columns: min-content auto;
+    margin-bottom: 2em;
+}
+    .blog-post p {
+        margin-top: 0;
+    }
+.blog-img {
+    width: 200px;
+}
+.blog-content {
+    padding: 0 1.5em;
+}
+.blog-content a {
+    font-weight: bold;
+}
+#legal p {
+    font-size: 12px;
+    line-height: 14px;
+}
+@media (min-width: 300px) and (max-width: 768px) {
+    .farmer-bio {
+        flex-direction: column;
+    }
+    .blog-content p {
+        display: none;
+    }
+}

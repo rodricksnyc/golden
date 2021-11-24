@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #site-survey {
+        width: 350px;
+        padding: 25px 30px;
+        position: fixed;
+        bottom: -100%;
+        right: 0;
+        -webkit-box-shadow: -16px -4px 30px 0px rgba(0,0,0,0.35);
+        -moz-box-shadow: -16px -4px 30px 0px rgba(0,0,0,0.35);
+        box-shadow: -16px -4px 30px 0px rgba(0,0,0,0.35);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+        z-index: 9999;
+        }
+
+        #site-survey.visible {
+        bottom: 0;
+        }
+
+        #site-survey {
+        background: rgba(189,85,28,0.95);
+        }
+
+        #site-survey .survey-questions {
+        display: none;
+        }
+
+        #site-survey sup {
+        font-size: 12px;
+        }
+
+        #site-survey h3 {
+        color:#fff;
+        display: block;
+        font-size:18px;
+        font-weight: 400;
+        margin: 15px 0 0;
+        }
+
+        #site-survey.syngenta-us h3, #site-survey.kmgm h3 {
+        color: #fff;
+        }
+
+        #site-survey .form-intro h3 {
+        margin: 0;
+        }
+
+        #site-survey p {
+        margin-bottom: 0;
+        }
+
+        #site-survey.syngenta-us p, #site-survey.kmgm p {
+        color: #fff;
+        }
+
+        #site-survey textarea, #site-survey button {
+        width: calc(100% / 3 - 6px);
+        padding: 5px 0;
+        margin-right: 2px;
+        border-radius: 0;
+        border: none;
+        outline: none;
+        }
+
+        #site-survey textarea, #site-survey select {
+        outline: none;
+        border: none;
+        width: 100%;
+        margin-top: 15px;
+        }
+
+        #site-survey textarea {
+        resize: none;
+        padding: 10px;
+        height: 100px;
+        }
+
+        #site-survey button {
+        background: #fff;
+        margin-top: 20px;
+        cursor: pointer;
+        }
+
+        #site-survey button:first-child {
+        margin-left: 0;
+        }
+
+        #site-survey button.active {
+        background: #8a380a;
+        color: #fff;
+        }
+
+        #site-survey div.close-button {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        }
+
+        #site-survey div.close-button svg path {
+        fill-rule: evenodd;
+        fill: #000;
+        }
+
+        #site-survey.syngenta-us div.close-button svg path, #site-survey.kmgm div.close-button svg path {
+        fill: #fff;
+        }
+
+        #site-survey .survey-thanks {
+        display: none;
+        }
+    </style>
+    <style>
+        <link rel="stylesheet" type="text/css" href="/survey/css/survey.css" />
+    </style>
+</head>
+<body>
+    <div id="formQualtrics" data-survey-id="SV_2mzgmGHdpMCQIYd">
+        <div class="container">
+            <div id="site-survey">
+                <div class="form-intro">
+                    <h3>Is this page helpful to you?</h3>
+                    <button class="btnclick" id="btnYes" value="Yes" name="Yes" data-qid="Q1" data-question="Is this Page Helpful?" data-importId="QID1_TEXT">Yes</button>
+                    <button class="btnclick" id="btnSortof" value="Sort of" name="Sort of" data-qid="Q1" data-question="Is this Page Helpful?" data-importId="QID1_TEXT">Sort of</button>
+                    <button class="btnclick" id="btnNotReally" value="Not really" name="Not really" data-qid="Q1" data-question="Is this Page Helpful?" data-importId="QID1_TEXT">Not really</button>
+                </div>
+                <div class="survey-questions">
+                    <h3>How can we improve<br />this page? <sup>(optional)</sup></h3>
+                    <textarea id="improve-how" name="Improvements" placeholder="Tell us by typing here." data-question="How can we improve this page" data-qid="Q2" data-importId="QID2_TEXT"></textarea>
+                    <h3>Can you tell us your<br />role in agriculture? <sup>(optional)</sup></h3>
+                    <select name="Agriculture role" id="agriculture-role" data-question="Can you tell us your role in agriculture?" data-qid="Q3" data-importId="QID5_TEXT">
+                        <option selected=selected>---Select---</option>
+                        <option>Farm owner/operator</option>
+                        <option>Seed dealer</option>
+                        <option>Sales rep</option>
+                        <option>Agronomist</option>
+                        <option>Student</option>
+                        <option>Farm advisor</option>
+                        <option>Farm employee</option>
+                        <option>Journalist</option>
+                        <option>Financial investor</option>
+                        <option>Other</option>
+                    </select>
+                    <button id="submit-survey">Submit</button>
+                    <div style="display: none">
+                        <input type="text" name="User IP" id="userId" data-qid="Q8" data-question="IP Address" data-importId="QID8_TEXT" />
+                        <input type="text" name="Browser" id="browserId" data-qid="Q4" data-question="User Info" data-importId="QID6_TEXT" />
+                        <input type="text" name="Current URL" id="currentUrlId" data-qid="Q7" data-question="Current URL(referrer)" data-importId="QID7_TEXT" />
+                        <input type="text" name="Category" id="categoryId" data-qid="Q9" data-question="Category ID" data-importId="QID9_TEXT" />
+                        <input type="text" name="GAID" id="GAID" data-qid="Q10" data-question="GA Client ID" data-importId="QID10_TEXT" />
+                    </div>
+                </div>
+                <div class="survey-thanks">
+                    <h3>Thanks for the feedback.</h3>
+                    <p>We appreciate your participation</p>
+                    <button class="close-button">Close</button>
+                </div>
+                <div class="close-button">
+                    <?xml version="1.0" encoding="UTF-8" ?>
+                    <svg viewBox="0 0 61.88 60.78" xmlns="http://www.w3.org/2000/svg">
+                        <g data-name="Layer 2">
+                            <g data-name="Layer 1">
+                                <path class="cls-1" d="M57.38,0l4.5,4.42L4.5,60.78,0,56.36Z" />
+                                <path class="cls-1" d="M61.88,56.36l-4.5,4.42L0,4.42,4.5,0Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/survey/js/Qualtrics.js">
+    </script>
+    <script src="/survey/js/survey.js?v=1.0">
+    </script>
+</body>
+</html>

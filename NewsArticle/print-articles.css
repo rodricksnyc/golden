@@ -1,0 +1,57 @@
+﻿.print-only {
+    display: block;
+}
+
+header, .sidebar, h6, .article-share, #mailing-list, .arch-element, footer, .social-icons, h3:last-of-type, hr:last-of-type, #site-survey {
+    display: none;
+}
+
+
+.print-header {
+    margin-bottom: 30px;
+}
+
+.print-header-aia-logo {
+    margin-top: 8px;
+}
+
+.print-header-orange-line {
+    height: 6px;
+    width: 100%;
+    border: 1px solid orange;
+    margin-top: 18px;
+}
+
+
+.page-content {
+    padding-top: 0;
+}
+
+
+
+.print-footer {
+    border-top: 3px solid #cb6015;
+    margin-top: 30px;
+}
+
+    .print-footer p {
+        color: darkgray;
+        line-height: 1.1em;
+    }
+
+        .print-footer p.legal-copy {
+            margin-top: 0px;
+            line-height: 1em;
+        }
+
+#article-page .col-sm-8 {
+    width: 100%;
+}
+
+#article-content {
+    columns: 2;
+}
+
+    #article-content #mainBody_mainArticle img {
+        height: auto !important;
+    }

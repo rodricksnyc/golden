@@ -1,0 +1,366 @@
+/* UTILITY */
+
+/**
+
+ADJUST FILE PATH TO FONTS BEFORE LAUNCH
+
+**/
+
+@font-face {
+    font-family: 'GHVeneer';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/33BD70_6_0.woff2') format('woff2'), url('../fonts/33BD70_6_0.woff') format('woff'), url('../fonts/33BD70_6_0.ttf') format('truetype'), url('../fonts/33BD70_6_0.eot?#iefix') format('embedded-opentype');
+}
+
+.sr-only{
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+  padding:0 !important;	
+}
+
+/* Hero */
+
+#pp-hero .hero-holder{
+	background-position:top center;
+	display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#pp-hero .hero-holder .pp-hero-logo{
+	width: 50%;
+    max-width: 1120px;
+    display: block;
+    margin-bottom: 65px;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width:1024px){
+	#pp-hero .hero-holder .pp-hero-logo{
+		width:90%;
+	}
+}
+
+/* pp hero holder  */
+
+#pp-hero .hero-holder.st:after{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	content:"";
+	background:rgba(255,255,255,.5);
+}
+
+#pp-hero .hero-holder.ghcp{
+	background-position-y:-300px;
+}
+
+#pp-hero .hero-holder.sa{
+	background-position-y:-150px;
+}
+
+#pp-hero .hero-holder.ghcam{
+	background-position-y:top;
+}
+
+@media screen and (max-width:1440px){
+	#pp-hero .hero-holder.ghcp{
+		background-position-y:-200px;
+	}
+	#pp-hero .hero-holder.sa{
+		background-position-y:-100px;
+	}
+}
+
+@media screen and (max-width:992px){
+	#pp-hero .hero-holder.sa{
+		background-position-y:top;
+	}
+	#pp-hero .hero-holder.ghcp{
+		background-position-y:-100px;
+	}
+}
+
+
+@media screen and (max-width:768px){
+	#pp-hero .hero-holder.sa{
+		background-position-y:top;
+	}
+	#pp-hero .hero-holder.ghcp{
+		background-position-y:top;
+	}
+}
+
+/* Nav */
+
+section#pp-nav-section{
+	padding:0 0 70px;
+}
+
+#pp-nav-section.has-arch  {
+	margin-bottom: 30px;
+}
+
+#pp-nav-list{
+	padding:initial;
+	margin:initial;
+	width:100%;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#pp-nav-list .pp-nav-list-item{
+	list-style-type: none;
+	flex-grow:1;
+	text-align:center;
+}
+
+
+
+#pp-nav-list .pp-nav-list-item .pp-nav-list-item-link{
+	font-size:20px;
+	color:black;
+	background: #f0f0f0;
+	text-transform: uppercase;
+	text-decoration:none;
+	font-family:"GHVeneer", "Open Sans", sans-serif;
+}
+
+#pp-nav-list .pp-nav-list-item .pp-nav-list-item-link:hover, #pp-nav-list .pp-nav-list-item .pp-nav-list-item-link:focus, #pp-nav-list .pp-nav-list-item.active .pp-nav-list-item-link{
+	outline:0;
+	color:#d25f15;
+}
+
+#pp-nav-list .pp-nav-list-item:nth-child(even){
+	border-left:1px solid grey;
+	border-right:1px solid grey;
+}
+
+@media only screen and (min-width: 1200px){
+	section#pp-nav-section{
+		padding:0 0 70px;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	section#pp-nav-section{
+		padding:0 0 70px;
+	}
+}
+
+/* MAIN SECTION */
+
+h2.pp-title{
+	color:black;
+	text-transform: initial;
+	font-weight:bold;
+	font-size:2.4rem;
+	margin-bottom:16px;
+}
+
+.pp-main-cont.has-arch{
+	padding-top:70px;
+}
+
+/* MODAL VIDEO */
+
+.pp-main-section .resource-card .primary, .pp-main-cont .resource-card .primary{
+	padding-bottom:0;
+}
+
+.pp-main-section figure:before, .pp-main-cont figure:before{
+	content: "";
+	background-image: url(https://www.goldenharvestseeds.com/images/seed-advisor/play-btn.svg);
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	opacity: .6;
+	top: 25%;
+	left: 25%;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 100;
+}
+
+/* BOTTOM SECTION */
+
+.pp-main-section-bottom.grey.has-arch{
+	padding-top:70px;
+}
+
+.pp-main-section-bottom {
+	z-index: 1;
+}
+
+.pp-resource-card{
+	width: 100%;
+	height: 230px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom:30px;
+	text-decoration:none;
+	padding:0 75px;
+	text-align:center;
+	position:relative;
+}
+
+.pp-resource-card .pp-resource-card-text{
+	color:white;
+	font-size:2.4rem;
+	font-weight:bold;
+	position:relative;
+	z-index:1;
+}
+
+@media screen and (max-width:768px){
+	.pp-resource-card{
+		margin-bottom:15px;
+	}
+}
+
+.pp-resource-card:after{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	content:"";
+	background:linear-gradient(rgba(210, 95, 21,1), rgba(210, 95, 21,1));
+	opacity:0;
+	transition:all .3s ease-in-out;
+}
+
+#ghcam.pp-resource-card{
+	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../images/Corn Agronomy.png") top left / cover;
+}
+
+#sa.pp-resource-card{
+	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../images/Soybean portfolio.png") center left / cover;
+}
+
+#ghcp.pp-resource-card{
+	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../images/Corn portfolio.png") top left / cover;
+}
+
+#st.pp-resource-card{
+	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url("../images/Soybean traits.png") top left / cover;
+}
+
+.pp-main-section-bottom .pp-resource-card:hover .pp-resource-card-text, .pp-main-section-bottom .pp-resource-card:hover{
+	color:white;
+	text-decoration:none;
+}
+
+.pp-main-section-bottom .pp-resource-card:hover:after, .pp-main-section-bottom .pp-resource-card:focus:after{
+	transition:all .3s ease-in-out;
+	opacity:1;
+}
+
+/* Related Articles */
+
+#st-related-articles{
+	padding-top:35px;
+}
+
+.related-articles .pp-title{
+	text-align:center;
+}
+
+.related-articles-article{
+	margin:17px 0;
+}
+
+.copy-p{
+	margin:17px 0;
+}
+
+/* AIA bottom */
+.aia{
+	text-align:center;
+}
+
+.aia-copy{
+	max-width:65%;
+	margin:17px auto 35px;
+}
+
+@media screen and (max-width:992px){
+	.aia-copy{
+		max-width:100%;
+	}
+	.aia{
+		text-align: left;
+	}
+}
+
+
+/* mobile nav */
+
+#pp-mobile-nav{
+	display: none;
+}
+
+.pp-mobile-nav-toggle{
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: rgba(100,100,100,1);
+    font-weight: bold;
+}
+
+.pp-mobile-nav-toggle:hover, .pp-mobile-nav-toggle:focus, .pp-mobile-nav-toggle:active, .pp-mobile-nav-toggle:visited{
+	color: rgba(100,100,100,1);
+	text-decoration:none;
+}
+
+#pp-mobile-nav-list{
+	margin:0 auto;
+	padding: 0 0 15px;
+	list-style-type: none;
+}
+
+.pp-mobile-nav-item{
+	margin:1rem 0;
+}
+
+.pp-mobile-nav-item a, .pp-mobile-nav-item a:active{
+	color:rgba(100,100,100,1);
+	text-decoration:none;
+}
+
+.pp-mobile-nav-item.active a{
+	color:rgba(100,100,100,1);
+	text-decoration:underline;
+}
+
+@media screen and (max-width:992px){
+	#pp-mobile-nav{
+	    background: lightgray;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	#pp-nav-section .container{
+		display:none;
+	}
+	#pp-mobile-nav-list{
+		padding: 0 15px 15px;
+	}
+}

@@ -1,0 +1,1141 @@
+
+/* Webkit Fix
+====================================*/
+textarea, input[type="text"], input[type="button"], input[type="search"], input[type="submit"]
+{
+    -webkit-appearance: none;
+    border-radius: 0;
+    outline: none;
+}
+
+input[type="text"]
+{
+    padding: 0 15px;
+}
+
+/* Global
+====================================*/
+
+.sectionTitle
+{
+    margin: 25px 0;
+}
+.sectionTitle h2
+{
+    color: #5f7800;
+    font-size: 22px;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+span.sectionTitle
+{
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 35px 0;
+    color: #000;
+}
+span.managementTitle
+{
+    display: block;
+    font-weight: bold;
+    color: #d25f15;
+    margin-top: 15px;
+}
+
+.brand-enogen span.managementTitle
+{
+    color: #439539;
+}
+.pageTitle
+{
+    font-size: 15px;
+    margin: 0;
+    line-height: 1em;
+    color: #55565a;
+    padding: 15px 0;
+    font-weight: 700;
+}
+.seed-logo
+{
+    float: right;
+    padding: 15px 0;
+}
+.learnMoreBtn, .learnMoreBtn:link, .learnMoreBtn:visited
+{
+    display: block;
+    width: 225px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform:uppercase;
+    color: #333;
+    padding: 15px 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+.brand-gh .learnMoreBtn,
+.brand-gh-soy .learnMoreBtn
+{
+    background: transparent;
+    border: 1px solid #d25f15;
+    color:#d25f15;
+}
+
+.brand-gh .learnMoreBtn:hover,
+.brand-gh-soy .learnMoreBtn:hover
+{
+    background: #d25f15;
+    color:#fff;
+}
+
+.brand-enogen .learnMoreBtn
+{
+    background: transparent;
+    border: 1px solid #439539;
+    color:#439539;
+}
+
+.brand-enogen .learnMoreBtn:hover
+{
+    background: #439539;
+    color:#fff;
+}
+
+.product-finder-legal {
+    
+    margin-top: 15px;
+    
+}
+
+    .product-finder-legal p {
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+
+        .product-finder-legal p:first-child {
+            margin-top: 0;
+        }
+
+    .product-finder-legal .legal-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+        .product-finder-legal .legal-images img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .product-finder-legal .legal-images .break {
+            flex-basis: 100%;
+            height: 1.5rem;
+        }
+
+
+.text-center
+{
+    text-align: center;
+}
+.text-center
+{
+    text-align: center;
+}
+.text-right
+{
+    text-align: right;
+}
+
+/* Hero
+====================================*/
+.heroTitle
+{
+    color: #d25f15;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing:-1px;
+    font-weight:600;
+    margin :0;
+}
+
+.brand-enogen .heroTitle {
+    color:#439539;
+}
+
+/* Product Labels
+====================================*/
+.results > hr
+{
+    height: 15px;
+    background: #f5f5f5;
+    border-top: none;
+    margin: 15px;
+}
+.product-container
+{
+    margin-top: 25px;
+}
+.product-label
+{
+    margin: 0 auto 25px auto;
+    font-family: sans-serif;
+    line-height: 16px;
+    position: relative;
+}
+.product-label div
+{
+    display: table-cell;
+}
+.product-label .left
+{
+    width: 10px;
+    background: url('../images/products/labels.jpg') 0 0;
+}
+.brand-gh .product-label.active .left,
+.brand-gh-soy .product-label.active .left
+{
+    background: url('../images/products/labels.jpg') 0 176px;
+}
+
+.brand-enogen .product-label.active .left
+{
+    background: url('../images/products/labels.jpg') 0 132px;
+}
+
+.product-label .middle
+{
+    font-size: 18px;
+    font-weight: 700;
+    height: 44px;
+    border-top: 1px solid #55565a;
+    border-bottom: 1px solid #55565a;
+    vertical-align: middle;
+    width: 238px;
+}
+.brand-gh .product-label.active .middle,
+.brand-gh-soy .product-label.active .middle
+{
+    background: #f99900;
+}
+
+.brand-enogen .product-label.active .middle
+{
+    background: #439539;
+}
+
+
+
+
+
+.product-label .middle-right
+{
+    width: 16px;
+    background: url('../images/products/labels.jpg') 16px 0;
+}
+.product-label.new .middle-right
+{
+    background: url('../images/products/new-bg.png') -10px 0 !important;
+    background-position: -10px 0;
+}
+.product-label.new .middle-right:before
+{
+    display: block;
+    width: 10px;
+    height: 42px;
+    content: "";
+    background: url('../images/products/new-bg.png');
+    position: absolute;
+    top: 0;
+    right: 56px;
+}
+.product-label.new .middle-right:after
+{
+    display: block;
+    width: 42px;
+    height: 44px;
+    content: "";
+    background: #9e1c20 url('../images/products/new.png') center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 14px;
+}
+.brand-gh .product-label.active .middle-right,
+.brand-gh-soy .product-label.active .middle-right
+{
+    background: url('../images/products/labels.jpg') 16px 176px;
+}
+
+.brand-enogen .product-label.active .middle-right
+{
+    background: url('../images/products/labels.jpg') 16px 132px;
+}
+
+
+
+.product-label .right
+{
+    width: 56px;
+    height: 44px;
+    background: #55565a;
+    color: #fff;
+    text-align: center;
+}
+.product-label .right span
+{
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    padding-top: 6px;
+    line-height: 15px;
+}
+
+.chart
+{
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+.chart img
+{
+    width: 100%;
+}
+.chart .bar-container
+{
+    background: url('../images/product-detail/chart.png');
+    background-size: contain;
+    padding: 10px 0;
+}
+.chart .bar-container.management
+{
+    background: url('../images/product-detail/chart-management.png');
+    background-size: contain;
+}
+.chart .bar-container .bar
+{
+    margin-top: 5px;
+    color: #333;
+    font-size: 15px;
+    padding: 2px 5px;
+    white-space: nowrap;
+}
+.chart .bar-container .bar:first-child
+{
+    margin-top: 0;
+}
+.brand-gh .chart .bar-container .bar,
+.brand-gh-soy .chart .bar-container .bar
+{
+    background: #d25f15;
+    color:#fff;
+}
+
+.brand-enogen .chart .bar-container .bar
+{
+    background: #439539;
+    color:#fff;
+}
+
+
+
+.chart span
+{
+    position: absolute;
+    right: 0px;
+    bottom: -25px;
+}
+
+.chart-labels
+{
+    position: relative;
+}
+.chart-label
+{
+    display: inline-block;
+    position: absolute;
+}
+.chart-label:nth-child(1)
+{
+    left: 22%;
+}
+.chart-label:nth-child(2)
+{
+    left: 48%;
+}
+.chart-label:nth-child(3)
+{
+    left: 72%;
+}
+.chart-label:nth-child(4)
+{
+    left: 98%;
+}
+
+.chart-table
+{
+    display: table;
+    width: 100%;
+}
+.chart-row
+{
+    display: table-row;
+}
+.chart-row > div
+{
+    display: table-cell;
+    width: 50%;
+}
+
+.more-information
+{
+    color: #333;
+    padding: 15px 0;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.brand-gh .more-information,
+.brand-gh-soy .more-information
+{
+    background: #f99900;
+}
+
+.brand-enogen .more-information {
+    background: #439539;
+}
+
+/* Product Details
+====================================*/
+#product-detail {
+    margin-bottom: 30px;
+}
+
+#product-detail hr
+{
+    margin: 50px 0;
+}
+
+ .product-label
+{
+    margin: 15px 0 0 0;
+    display: inline-block;
+}
+
+.hero
+{
+    position: relative;
+}
+.hero ul
+{
+    margin: 30px 0 0 0;
+}
+
+.utility-buttons
+{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+.utility-buttons a
+{
+    display: inline-block;
+    background-image: url('../images/product-detail/utility.png');
+    width: 44px;
+    height: 44px;
+}
+.brand-gh .utility-buttons a.email-button,
+.brand-enogen .utility-buttons a.email-button
+{
+    background-position: -44px 44px;
+}
+.brand-gh .utility-buttons a.print-button
+.brand-enogen .utility-buttons a.print-button
+{
+    background-position: -44px 0;
+}
+.brand-nkcorn .utility-buttons a.email-button
+{
+    background-position: 0 44px;
+}
+.brand-nkcorn .utility-buttons a.print-button
+{
+    background-position: 0 0;
+}
+.brand-nksoy .utility-buttons a.email-button
+{
+    background-position: 0 44px;
+}
+.brand-nksoy .utility-buttons a.print-button
+{
+    background-position: 0 0;
+}
+.brand-multi .utility-buttons a.email-button
+{
+    background-position: -44px 44px;
+}
+.brand-multi .utility-buttons a.print-button
+{
+    background-position: -44px 0;
+}
+
+
+.brand-gh-soy .utility-buttons a.email-button
+{
+    background-position: 0 44px;
+}
+.brand-gh-soy .utility-buttons a.print-button
+{
+    background-position: 0 0;
+}
+.brand-multi-soy .utility-buttons a.email-button
+{
+    background-position: -44px 44px;
+}
+.brand-multi-soy .utility-buttons a.print-button
+{
+    background-position: -44px 0;
+}
+
+.brand-gh .utility-buttons a,
+.brand-gh-soy .utility-buttons a
+{
+    background-color: #d25f15;
+}
+
+.brand-gh .utility-buttons a:hover,
+.brand-gh-soy .utility-buttons a:hover {
+    opacity: 75%;
+}
+
+.brand-enogen .utility-buttons a
+{
+    background-color: #439539;
+}
+
+.brand-enogen .utility-buttons a:hover {
+    opacity: 75%;
+}
+
+
+#key {
+    margin-bottom: 25px;
+}
+ 
+.detail-key
+{
+    background: #f5f5f5;
+    padding: 25px 20px;
+}
+.key-item {
+    display:inline-block;
+}
+     .col-sm-3 .key-item {
+        margin-left:7px;
+    }
+        .col-sm-3 .key-item:first-child {
+            margin-left:0;
+        }
+    .col-sm-8 .key-item {
+        margin-right:7px;
+    }
+.detail-key span.sectionTitle
+{
+    margin-bottom: 0;
+}
+.icon
+{
+    display: inline-block;
+    width: 26px;
+    height: 18px;
+    background: url('../images/product-detail/key.png');
+    text-align: center;
+}
+
+.icon.singleKey
+{
+    width: 12px;
+}
+.icon.highly
+{
+    background-position: 0 0;
+}
+.icon.most
+{
+    background-position: 0 72px;
+}
+.icon.appropriate
+{
+    background-position: 0 54px;
+}
+.icon.nr
+{
+    background-position: 0 36px;
+}
+.icon.na
+{
+    background-position: 0 18px;
+}
+.detail-key .col-sm-3 .icon, .detail-key .col-sm-8 .icon
+{
+    background: none;
+    font-weight: 700;
+}
+
+.row.tiles
+{
+    margin-top: 35px;
+}
+.row.tiles:first-child
+{
+    margin-top: 0;
+}
+.row.tiles .learnMoreBtn
+{
+    width: 100%;
+    margin-top: 40px;
+}
+
+.detail-tile
+{
+    padding: 30px 35px;
+    border-bottom: 1px solid #c6c7c9;
+}
+.row.tiles .col-sm-4:first-child .detail-tile
+{
+    padding-top: 0;
+}
+.detail-tile > strong
+{
+    display: block;
+    margin-top: -26px;
+}
+.detail-tile ul
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.detail-tile .bold
+{
+    font-weight: 700;
+}
+.detail-tile .chart
+{
+    margin: 0;
+}
+.detail-tile .chart .bar-container .bar
+{
+    padding: 0 5px;
+}
+.detail-tile.download
+{
+    padding: 0;
+    display: table;
+    width: 100%;
+}
+.brand-gh .detail-tile.download,
+.brand-gh-soy .detail-tile.download
+{
+    background: #d25f15 url('../images/product-detail/download.png') center center no-repeat;
+}
+.brand-gh .detail-tile.download:hover,
+.brand-gh-soy .detail-tile.download:hover
+{
+    background-color: #da7c09;
+}
+
+.brand-enogen .detail-tile.download
+{
+    background: #439539 url('../images/product-detail/download.png') center center no-repeat;
+}
+
+.brand-enogen .detail-tile.download:hover
+{
+    background-color: #c1cd23;
+}
+
+
+
+
+.detail-tile.download a
+{
+    display: table-cell;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+.detail-tile.download a span
+{
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+}
+.brand-nkcorn .detail-tile.download a, .brand-nksoy .detail-tile.download a, .brand-gh-soy .detail-tile.download a
+{
+    color: #fff;
+}
+.resources a
+{
+    text-decoration: none;
+}
+.resources .col-sm-4
+{
+    margin-top: 20px;
+}
+.resources .learnMoreBtn
+{
+    width: 100%;
+}
+.related ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hybrid Search
+====================================*/
+#hybrid-search
+{
+    background: #f5f5f5;
+    padding: 30px 20px;
+    margin:0 -15px;
+    border-top: 1px solid #55565a;
+    border-bottom: 1px solid #55565a;
+}
+#hybrid-search span
+{
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 30px;
+    line-height: 45px;
+}
+#hybrid-search form
+{
+    display: inline-block;
+    width: 100%;
+}
+#hybrid-search input[type="text"]
+{
+    border: 1px solid #d1d1d1;
+    height: 45px;
+    width: calc(100% - 45px);
+    display: inline-block;
+}
+#hybrid-search input[type="submit"]
+{
+    background: #000 url('../images/search.png') no-repeat center;
+    background-position: 0 0;
+    border: none;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    margin-left: -5px;
+    outline: none;
+}
+
+/*Hybrid detail page updates CR-245*/
+.adpSoiltype
+{
+    height: 21px;
+}
+/*Hybrid detail page updates CR-245*/
+
+/* MEDIA QUERIES */
+@media only screen and (min-width:768px)
+{
+    .pageTitle
+    {
+        font-size: 18px;
+    }
+    .seed-logo
+    {
+        padding: 0;
+    }
+
+
+    /* PRODUCT LABELS */
+    .product-label
+    {
+        width: auto;
+        margin: 15px 0;
+    }
+
+    /* PRODUCT DETAILS */
+    .key-item
+    {
+        top: 8px;
+    }
+    .key-margin-right {
+        margin-right: 2rem !important;
+    }
+    .detail-tile
+    {
+        border: 1px solid #c6c7c9;
+        margin-top: 40px;
+    }
+    .row.tiles .col-sm-6:nth-child(-n+2) .detail-tile
+    {
+        margin-top: 0;
+    }
+    .row.tiles .col-sm-4:first-child .detail-tile
+    {
+        padding-top: 30px;
+    }
+    .resources .col-sm-4
+    {
+        margin-top: 0;
+    }
+    .detail-tile .chart .bar-container .bar
+    {
+        padding: 0 5px;
+    }
+    .related ul > li
+    {
+        display: inline-block;
+        margin-left: 45px;
+    }
+    .related ul > li:first-child
+    {
+        margin-left: 0;
+    }
+}
+
+
+/*  Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+{
+    /* PRODUCT LABELS */
+    .product-label .middle
+    {
+        width: 211px;
+    }
+
+    /* PRODUCT DETAILS */
+    .detail-tile .chart .bar-container
+    {
+        bottom: 0;
+    }
+    .detail-tile .chart .bar-container .bar
+    {
+        padding: 5px 5px;
+    }
+}
+
+
+/*  Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)
+{
+    /* PRODUCT LABELS */
+    .product-label .middle
+    {
+        width: 278px;
+    }
+
+    /* PRODUCT DETAILS */
+    .row.tiles .col-sm-6:nth-child(-n+3) .detail-tile
+    {
+        margin-top: 0;
+    }
+    .detail-tile .chart .bar-container
+    {
+        bottom: 0;
+    }
+    .detail-tile .chart .bar-container .bar
+    {
+        padding: 0 5px;
+    }
+}
+
+/* Print Styling */
+@media print
+{
+    footer, .survey, .resources, .learnMoreBtn, hr
+    {
+        display: none;
+    }
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12
+    {
+        float: left;
+    }
+    .col-sm-12
+    {
+        width: 100%;
+    }
+    .col-sm-11
+    {
+        width: 91.66666667%;
+    }
+    .col-sm-10
+    {
+        width: 83.33333333%;
+    }
+    .col-sm-9
+    {
+        width: 75%;
+    }
+    .col-sm-8
+    {
+        width: 66.66666667%;
+    }
+    .col-sm-7
+    {
+        width: 58.33333333%;
+    }
+    .col-sm-6
+    {
+        width: 50%;
+    }
+    .col-sm-5
+    {
+        width: 41.66666667%;
+    }
+    .col-sm-4
+    {
+        width: 33.33333333%;
+    }
+    .col-sm-3
+    {
+        width: 25%;
+    }
+    .col-sm-2
+    {
+        width: 16.66666667%;
+    }
+    .col-sm-1
+    {
+        width: 8.33333333%;
+    }
+    .col-sm-pull-12
+    {
+        right: 100%;
+    }
+    .col-sm-pull-11
+    {
+        right: 91.66666667%;
+    }
+    .col-sm-pull-10
+    {
+        right: 83.33333333%;
+    }
+    .col-sm-pull-9
+    {
+        right: 75%;
+    }
+    .col-sm-pull-8
+    {
+        right: 66.66666667%;
+    }
+    .col-sm-pull-7
+    {
+        right: 58.33333333%;
+    }
+    .col-sm-pull-6
+    {
+        right: 50%;
+    }
+    .col-sm-pull-5
+    {
+        right: 41.66666667%;
+    }
+    .col-sm-pull-4
+    {
+        right: 33.33333333%;
+    }
+    .col-sm-pull-3
+    {
+        right: 25%;
+    }
+    .col-sm-pull-2
+    {
+        right: 16.66666667%;
+    }
+    .col-sm-pull-1
+    {
+        right: 8.33333333%;
+    }
+    .col-sm-pull-0
+    {
+        right: auto;
+    }
+    .col-sm-push-12
+    {
+        left: 100%;
+    }
+    .col-sm-push-11
+    {
+        left: 91.66666667%;
+    }
+    .col-sm-push-10
+    {
+        left: 83.33333333%;
+    }
+    .col-sm-push-9
+    {
+        left: 75%;
+    }
+    .col-sm-push-8
+    {
+        left: 66.66666667%;
+    }
+    .col-sm-push-7
+    {
+        left: 58.33333333%;
+    }
+    .col-sm-push-6
+    {
+        left: 50%;
+    }
+    .col-sm-push-5
+    {
+        left: 41.66666667%;
+    }
+    .col-sm-push-4
+    {
+        left: 33.33333333%;
+    }
+    .col-sm-push-3
+    {
+        left: 25%;
+    }
+    .col-sm-push-2
+    {
+        left: 16.66666667%;
+    }
+    .col-sm-push-1
+    {
+        left: 8.33333333%;
+    }
+    .col-sm-push-0
+    {
+        left: auto;
+    }
+    .col-sm-offset-12
+    {
+        margin-left: 100%;
+    }
+    .col-sm-offset-11
+    {
+        margin-left: 91.66666667%;
+    }
+    .col-sm-offset-10
+    {
+        margin-left: 83.33333333%;
+    }
+    .col-sm-offset-9
+    {
+        margin-left: 75%;
+    }
+    .col-sm-offset-8
+    {
+        margin-left: 66.66666667%;
+    }
+    .col-sm-offset-7
+    {
+        margin-left: 58.33333333%;
+    }
+    .col-sm-offset-6
+    {
+        margin-left: 50%;
+    }
+    .col-sm-offset-5
+    {
+        margin-left: 41.66666667%;
+    }
+    .col-sm-offset-4
+    {
+        margin-left: 33.33333333%;
+    }
+    .col-sm-offset-3
+    {
+        margin-left: 25%;
+    }
+    .col-sm-offset-2
+    {
+        margin-left: 16.66666667%;
+    }
+    .col-sm-offset-1
+    {
+        margin-left: 8.33333333%;
+    }
+    .col-sm-offset-0
+    {
+        margin-left: 0%;
+    }
+    .visible-xs
+    {
+        display: none !important;
+    }
+    .hidden-xs
+    {
+        display: block !important;
+    }
+    table.hidden-xs
+    {
+        display: table;
+    }
+    tr.hidden-xs
+    {
+        display: table-row !important;
+    }
+    th.hidden-xs, td.hidden-xs
+    {
+        display: table-cell !important;
+    }
+    .hidden-xs.hidden-print
+    {
+        display: none !important;
+    }
+    .hidden-sm
+    {
+        display: none !important;
+    }
+    .visible-sm
+    {
+        display: block !important;
+    }
+    table.visible-sm
+    {
+        display: table;
+    }
+    tr.visible-sm
+    {
+        display: table-row !important;
+    }
+    th.visible-sm, td.visible-sm
+    {
+        display: table-cell !important;
+    }
+}
+/* Seeding Rates */
+#seeding-rates table {
+    width: 100%;
+    border: 1px solid #c9cacd;
+    border-collapse:collapse;
+    font-weight:700;
+    text-align:center;
+}
+    #seeding-rates tr:nth-child(even) {
+        background: #e3ecf1;
+    }
+    #seeding-rates td {
+        border: 1px solid #c9cacd;
+        padding:5px 0;
+    }
+#seeding-rates h3{
+padding:25px 15px 20px 0px;
+
+}

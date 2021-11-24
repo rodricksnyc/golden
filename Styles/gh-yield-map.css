@@ -1,0 +1,920 @@
+﻿/*scrollbar for mobile showing*/
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+#map-container {
+    /*margin-top: -22px;*/
+    overflow: hidden;
+}
+
+#map-cover {
+    background-color: rgba(255,255,255,.8);
+    background-image: url(../Images/GHLoader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    z-index: 5000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+    #map-cover.show-cover {
+        display: block !important;
+    }
+
+#map-canvas {
+    width: 100%;
+    height: 250px;
+    z-index: 100;
+}
+
+.mobile-map h1,
+.mobile-map .mobile-canvas-cover,
+.mobile-map #map-content {
+    display: none !important;
+}
+
+.mobile-map #map-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    height: calc(100vh - 90px );
+    display: block !important;
+}
+
+
+.mobile-canvas-cover {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    cursor: pointer;
+    display: block;
+    z-index: 500;
+}
+
+.plot-map-marker {
+    width: 30px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.plt-mk-over {
+    width: 30px;
+    text-align: center;
+    color: #d26128;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .plt-mk-over.no-click {
+        cursor: default !important;
+    }
+
+.map-info-window {
+    width: 175px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px 0;
+}
+
+    .map-info-window h5 {
+        padding-bottom: 8px;
+        font-weight: bold;
+    }
+
+        .map-info-window h5.spacer {
+            display: none;
+        }
+
+
+    .map-info-window .gh-yield {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+
+
+
+#map-content {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+
+#map-container h1 {
+    color: #000;
+    font-size: 2.6rem;
+    font-weight: bold;
+    padding: 15px 15px;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: center;
+}
+
+#map-content .map-filter-cont {
+    background-color: #fff;
+    margin-top: 43px;
+}
+
+    #map-content .map-filter-cont:hover {
+        cursor: pointer;
+        background-color: #f4f4f4;
+    }
+
+
+    #map-content .map-filter-cont .title {
+        display: block;
+        color: #000;
+        line-height: 1rem;
+        font-weight: bold;
+    }
+
+    #map-content .map-filter-cont .filter-condensed {
+        padding: 10px 5px;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+        #map-content .map-filter-cont .filter-condensed span {
+            font-size: 1.4rem;
+            padding-left: 3px;
+            line-height: 3.1rem;
+        }
+
+            #map-content .map-filter-cont .filter-condensed span::before {
+                content: '|';
+                padding-right: 6px;
+            }
+
+            #map-content .map-filter-cont .filter-condensed span.sf-zip::before {
+                content: '';
+                padding: 0;
+            }
+
+    #map-content .map-filter-cont a.btn-filter,
+    #map-content .map-filter-cont a.btn-filter:focus {
+        background-color: #fff;
+        border: 1px solid #d25f15;
+        padding: 5px 10px;
+        color: #d25f15;
+        float: right;
+        font-weight: bold;
+        display: none;
+    }
+
+
+        #map-content .map-filter-cont a.btn-filter:hover {
+            text-decoration: none;
+        }
+
+    #map-content .map-filter-cont:hover a.btn-filter {
+        background-color: #d25f15;
+        color: #fff;
+    }
+
+
+
+#map-content .btn-arrow-down {
+    width: 33px;
+    height: 33px;
+    display: block;
+    overflow: hidden;
+    background-color: #d25f15;
+    padding: 1px;
+}
+
+#map-content .map-filter-cont .btn-arrow-down {
+    float: right;
+    margin-right: 7px;
+}
+
+#map-content .btn-arrow-down img {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+
+#map-content .btn-arrow-down.up img {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+.no-touch #map-content .map-filter-cont a.btn-filter:hover {
+    text-decoration: none;
+}
+
+.no-touch #map-content .map-filter-cont:hover a.btn-filter {
+    background-color: #d25f15;
+    color: #fff;
+}
+
+#map-content .map-legend {
+    height: 52px;
+    width: 100%;
+    border-top: none;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    line-height: 40px;
+    background-color: #d3d3d3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+    #map-content .map-legend span {
+        font-weight: normal;
+        padding-left: 10px;
+    }
+
+        #map-content .map-legend span.single img {
+            height: 20px;
+            padding-right: 5px;
+        }
+
+        #map-content .map-legend span.multi img {
+            height: 35px;
+            padding-right: 10px;
+        }
+
+
+#map-content .plots-container {
+}
+
+
+    #map-content .plots-container .plot-single {
+        padding: 8px 5px;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+
+        #map-content .plots-container .plot-single:hover,
+        #map-content .plots-container .plot-single.selected {
+            background-color: #f4f4f4;
+        }
+
+        #map-content .plots-container .plot-single .ps-number {
+            width: 40px;
+            height: 50px;
+            display: block;
+            float: left;
+            background-image: url(../Images/ghs-yr-pin-orange.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5rem;
+            padding-top: 4px;
+            font-weight: bold;
+        }
+
+#map-content .plot-name-cont .plot-single .ps-number,
+#map-content .plot-name-cont .plot-detail-tfive .ps-number {
+    width: 40px;
+    height: 50px;
+    display: block;
+    float: left;
+    background-image: url(../Images/ghs-yr-pin-white.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: #d26128;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 4px;
+    font-weight: bold;
+}
+
+#map-content .plot-name-cont .plot-detail-tfive .plot-title {
+    padding: 0 0 15px 8px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+#map-content .plots-container .plot-single:hover .ps-number, #map-content .plots-container .plot-single.selected .ps-number {
+    background-image: url(../Images/ghs-yr-pin-white.png);
+    color: #d26128;
+}
+
+#map-content .plots-container .plot-single .btn-arrow-down {
+    float: right;
+    margin-right: 7px;
+}
+
+#map-content .plots-container .plot-details,
+#map-content .plot-name-cont .plot-details {
+    float: left;
+    width: 75%;
+    padding-left: 10px;
+}
+
+
+    #map-content .plots-container .plot-details .plot-details-name,
+    #map-content .plot-name-cont .plot-details .plot-details-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+        #map-content .plots-container .plot-details .plot-details-name.nk-plot,
+        #map-content .plot-name-cont .plot-details .plot-details-name.nk-plot {
+            margin-top: 5px;
+        }
+
+    #map-content .plots-container .plot-details .plot-details-yield-avg {
+        font-size: 1.4rem;
+    }
+
+#map-content .plot-name-cont a {
+    margin-left: 8px;
+}
+
+a.load-more-plots {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 2px solid #e0e0e0;
+    background-color: #fff;
+}
+
+.load-more-cont {
+    width: 50%;
+    margin: 0 auto;
+}
+
+a.load-more-plots:hover {
+    text-decoration: none;
+    background-color: #f4f4f4;
+}
+
+a.load-more-plots.disabled:hover {
+    text-decoration: none;
+    background-color: #fff;
+}
+
+a.load-more-plots .results-viewing {
+    color: #000;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+
+a.load-more-plots .lmp-cta {
+    color: #d25f15;
+    background: transparent;
+    background-image: url(../Images/global/cta_arrow_orange.svg);
+    background-repeat: no-repeat;
+    background-position: 93% 52%;
+    background-size: 13px 13px;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0 45px 0 0;
+    line-height: 2.5rem;
+    visibility: visible;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+a.load-more-plots.disabled .lmp-cta {
+    visibility: hidden;
+}
+
+a.load-more-plots:hover .lmp-cta {
+    text-decoration: none;
+    background-position: 99% 52%;
+}
+
+a.load-more-plots .llp-cta {
+    color: #d25f15;
+    background: transparent;
+    background-image: url(../Images/global/cta_arrow_orange.svg);
+    background-repeat: no-repeat;
+    background-position: 93% 52%;
+    background-size: 13px 13px;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0 45px 0 0;
+    line-height: 2.5rem;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+a.load-more-plots:hover .llp-cta {
+    text-decoration: none;
+    background-position: 99% 52%;
+}
+
+a#btn-refresh-map {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: transparent;
+    z-index: 300;
+    width: 35px;
+    height: 35px;
+    background-image: url(../Images/global/refresh-map.svg);
+    overflow: hidden;
+    text-indent: -500px;
+    transform: rotate(0deg);
+    -webkit-transition: transform .25s ease;
+    -moz-transition: transform .25s ease;
+    -ms-transition: transform .25s ease;
+    -o-transition: transform .25s ease;
+    transition: transform .25s ease;
+}
+
+    a#btn-refresh-map.show {
+        display: block;
+        z-index: 600;
+    }
+
+    a#btn-refresh-map:hover {
+        transform: rotate(-360deg);
+    }
+
+a#btn-view-list {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background-color: transparent;
+    z-index: 300;
+    width: 35px;
+    height: 35px;
+    background-image: url(../Images/global/close-map.svg);
+    overflow: hidden;
+    text-indent: -500px;
+    transform: rotate(0deg);
+    -webkit-transition: transform .25s ease;
+    -moz-transition: transform .25s ease;
+    -ms-transition: transform .25s ease;
+    -o-transition: transform .25s ease;
+    transition: transform .25s ease;
+}
+
+    a#btn-view-list.show {
+        display: block;
+        z-index: 600;
+    }
+
+
+.plot-single-info {
+    display: none;
+    height: 0;
+    overflow: hidden;
+}
+
+
+    .plot-single-info a.btn-back,
+    .plot-single-info a.btn-back:focus,
+    .filter-back a.btn-back,
+    .filter-back a.btn-back:focus {
+        color: #d25f15;
+        background: transparent;
+        background-image: url(../Images/global/cta_arrow_orange_left.svg);
+        background-repeat: no-repeat;
+        background-position: 4% 52%;
+        background-size: 13px 13px;
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 0 0 0 25px;
+        margin-bottom: 20px;
+        line-height: 3.5rem;
+        -webkit-transition: all .25s ease;
+        -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+        -o-transition: all .25s ease;
+        transition: all .25s ease;
+    }
+
+
+        .plot-single-info a.btn-back:hover,
+        .filter-back a.btn-back:hover {
+            text-decoration: none;
+            background-position: 0% 52%;
+        }
+
+
+.mobile-plot-single-info {
+    padding: 10px;
+    height: 0;
+    display: none;
+}
+
+.plot-single.open .mobile-plot-single-info {
+    height: 265px;
+    display: block;
+}
+
+.plot-single.open {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+#map-content .plot-single.open .btn-arrow-down img {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+.mobile-plot-single-info .plot-detail-tfive {
+    display: none;
+}
+
+table#top-five-gh-results {
+    width: 100%;
+    margin: 0 0 20px 10px;
+}
+
+    table#top-five-gh-results td {
+        padding: 15px 0;
+        font-size: 1.8rem;
+    }
+
+.mobile-plot-single-info table#top-five-gh-results td {
+    padding: 8px 0;
+    font-size: 1.5rem;
+}
+
+table#top-five-gh-results td.gh5-identifier {
+    font-weight: bold;
+}
+
+
+.full-filters {
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    padding: 0 15px;
+    -webkit-transition: height .25s ease;
+    -moz-transition: height .25s ease;
+    -ms-transition: height .25s ease;
+    -o-transition: height .25s ease;
+    transition: height .25s ease;
+}
+
+    .full-filters.open {
+        height: auto;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+
+    .full-filters h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #000;
+        padding-bottom: 15px;
+    }
+
+    .full-filters label[for="location"] {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .full-filters label {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #000;
+    }
+
+
+    .full-filters .select-box {
+        margin: 5px 0 25px;
+        width: 95%;
+        height: 46px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #d25f15;
+        background-color: #fff;
+    }
+
+    .full-filters .input-box {
+        margin: 5px 0 25px;
+        width: 95%;
+        z-index: 10;
+    }
+
+        .full-filters .input-box input {
+            width: calc(100% - 46px);
+            float: left;
+            height: 46px;
+            border: 1px solid #d25f15;
+            background-color: #fff;
+        }
+
+.full-filters input[type="submit"], .full-filters input[type="button"] {
+        background-image: url('../images/search.png');
+        background-repeat: no-repeat;
+        background-size: 20px 21px;
+        background-position: center;
+        background-color: #d25f15;
+        border: none;
+        width: 46px;
+        height: 46px;
+        float: left;
+        outline: none;
+    }
+
+
+    .full-filters .select-box select {
+        width: calc(100% + 46px);
+        background-color: transparent;
+        height: 46px;
+        line-height: 46px;
+        border: none;
+        margin: 0;
+        padding: 0 10px;
+        border-radius: 0;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+
+    .full-filters .select-box::after {
+        content: "";
+        text-align: center;
+        background-color: #d25f15;
+        background-image: url(../images/arrow-down-white.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-left: 1px solid #d25f15;
+        width: 46px;
+        height: 46px;
+        margin-top: -47px;
+        padding-top: 14px;
+        padding-right: 4px;
+        float: right;
+    }
+
+
+
+@media only screen and (min-width:768px) {
+    #map-content .plots-container .plot-single {
+        padding: 8px 15px;
+    }
+
+    #map-content .plots-container .plot-details,
+    #map-content .plot-name-cont .plot-details {
+        width: 360px;
+    }
+
+        #map-content .plots-container .plot-details .plot-details-name,
+        #map-content .plot-name-cont .plot-details .plot-details-name {
+            font-size: 1.8rem;
+        }
+
+    #map-content .map-filter-cont .filter-condensed {
+        padding: 10px 15px 10px 5px;
+    }
+}
+
+@media only screen and (min-width:992px) {
+    #map-cover {
+        height: calc(100vh - 100px);
+        position: absolute;
+    }
+
+    .mobile-canvas-cover {
+        display: none;
+    }
+
+    #map-canvas {
+        width: calc(100% - 475px);
+        height: calc(100vh - 100px);
+        min-height: 650px;
+        float: right;
+    }
+
+    /* fix to offset the zoom control on google maps */
+    div.gmnoprint {
+        margin-left: -20px;
+        margin-top: 10px;
+    }
+
+    img[src="/Images/ghs-yr-pin-white.png"] {
+        cursor: default;
+    }
+
+    a#btn-refresh-map {
+        display: block;
+        position: absolute;
+        top: 110px;
+        right: 32px;
+        bottom: auto;
+        left: auto;
+        height: 35px;
+        width: 35px;
+    }
+
+    .map-info-window {
+        width: auto;
+        padding: 5px;
+    }
+
+        .map-info-window h5 {
+            display: inline-block;
+        }
+
+            .map-info-window h5.spacer {
+                display: inline-block;
+                padding: 0 10px;
+            }
+
+        .map-info-window .gh-yield {
+            font-size: 1.8rem;
+        }
+
+    a#btn-view-list {
+        display: none;
+    }
+
+    #map-content {
+        height: 85vh;
+        min-height: 650px;
+        width: 475px;
+        float: left;
+        display: block;
+        background-color: #fff;
+        padding-top: 10px;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+
+    .full-filters {
+        background: #fff;
+        height: 90vh;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 79px;
+        left: -500px;
+        padding: 0 15px;
+        z-index: 200;
+        -webkit-transition: left .25s ease;
+        -moz-transition: left .25s ease;
+        -ms-transition: left .25s ease;
+        -o-transition: left .25s ease;
+        transition: left .25s ease;
+    }
+
+        .full-filters.open {
+            height: 440px;
+        }
+
+        .full-filters.show {
+            left: 0;
+        }
+
+    #map-content .plots-container {
+        height: calc(85vh - 300px);
+        min-height: 310px;
+        overflow: auto;
+        z-index: 100;
+    }
+
+    #map-content .map-legend {
+        height: 52px;
+        width: 100%;
+        border-top: 2px solid #d25f15;
+        display: block;
+        font-size: 1.7rem;
+        font-weight: bold;
+        padding: 10px;
+        line-height: 45px;
+        background-color: #fff;
+        position: relative;
+        top: auto;
+        left: auto;
+    }
+
+        #map-content .map-legend span.single img {
+            height: 35px;
+        }
+
+        #map-content .map-legend span.multi img {
+            height: 40px;
+        }
+
+    #map-content .map-filter-cont {
+        margin-top: 0;
+    }
+
+        #map-content .map-filter-cont .filter-condensed {
+            padding: 10px 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+            #map-content .map-filter-cont .filter-condensed span {
+                font-size: 1.5rem;
+                padding-left: 5px;
+                line-height: 3.1rem;
+            }
+
+        #map-content .map-filter-cont .title {
+            display: none;
+        }
+
+        #map-content .map-filter-cont a.btn-filter,
+        #map-content .map-filter-cont a.btn-filter:focus {
+            display: block;
+        }
+
+    .full-filters {
+        background: #fff;
+        width: 100%;
+        display: block;
+        padding: 0 15px;
+        -webkit-transition: left .25s ease;
+        -moz-transition: left .25s ease;
+        -ms-transition: left .25s ease;
+        -o-transition: left .25s ease;
+        transition: left .25s ease;
+    }
+
+    #map-content .btn-arrow-down.toggle-filter {
+        display: none;
+    }
+
+    .full-filters .select-box,
+    .full-filters .input-box {
+        width: 85%;
+    }
+
+    .plot-single-info {
+        background: #fff;
+        height: 90vh;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 79px;
+        left: -500px;
+        padding: 0 15px;
+        z-index: 200;
+        -webkit-transition: left .25s ease;
+        -moz-transition: left .25s ease;
+        -ms-transition: left .25s ease;
+        -o-transition: left .25s ease;
+        transition: left .25s ease;
+    }
+
+        .plot-single-info.show {
+            left: 0;
+        }
+
+    #map-content a.toggle-plot-info {
+        display: none;
+    }
+
+    .full-filters label[for="location"] {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+}

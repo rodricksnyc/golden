@@ -1,0 +1,516 @@
+﻿/* Custom Seed Guide
+====================================*/
+#seed-guide-form {
+    background-image: url(../Images/product-finder/top-texture.jpg);
+    background-repeat: repeat-x;
+    padding-top: 30px;
+    margin-bottom:100px;
+}
+    #seed-guide-form .intro-row {
+        margin-bottom:30px;
+    }
+    #seed-guide-form h1 {
+        font-family: 'GHVeneer';
+        font-size:45px;
+        font-weight:400;
+        color:#000;
+        margin-bottom:30px;
+        line-height:1em;
+    }
+    #seed-guide-form hr {
+        border-top: 2px solid #000;
+        margin:60px 0;
+    }
+
+@media only screen and (min-width:768px) {
+    #seed-guide-form {
+        padding-top: 70px;
+    }
+    #seed-guide-form .intro-row {
+        margin-bottom: 50px;
+    }
+        #seed-guide-form h1 {
+            margin-bottom:30px;
+        }
+}
+
+#disclaimer {
+    background: #e6e6e6;
+    padding: 30px;
+    position: absolute;
+    width: 100%;
+    top: 105px;
+    left: 0;
+    z-index: 999;
+    text-align: center;
+}
+
+    #disclaimer p {
+        font-size: 18px;
+        margin: 0;
+    }
+
+        #disclaimer p:before {
+            content: "";
+            display: inline-block;
+            width: 47px;
+            height: 41px;
+            background: url('../images/alert.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            position: relative;
+            top: -3px;
+            margin-right: 20px;
+        }
+
+.sg-form-section ::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.sg-form-section :-moz-placeholder {
+    font-style: italic;
+}
+
+.sg-form-section ::-moz-placeholder {
+    font-style: italic;
+}
+
+.sg-form-section :-ms-input-placeholder {
+    font-style: italic;
+}
+
+.sg-form-section {
+    position: relative;
+    counter-increment: section;
+}
+
+    .sg-form-section:first-child {
+        margin-top: 0;
+        display: block;
+    }
+
+    .sg-form-section h3 {
+        font-family: 'GHVeneer';
+        font-size:36px;
+        font-weight:400;
+        line-height:1em;
+        display: inline-block;
+        margin-bottom: 0;
+        color: #000;
+    }
+
+    .sg-form-section p {
+        font-weight:700;
+    }
+
+    .sg-form-section strong {
+        display: block;
+        color: #000;
+    }
+
+    .sg-form-section:nth-child(2) strong {
+        margin-top: 20px;
+    }
+
+    .sg-form-section span {
+        display: inline-block;
+        font-weight:700;
+    }
+
+    .sg-form-section:nth-child(2) span:not(.checkmark) {
+        margin: 0 15px;
+    }
+
+    .sg-form-section input[type="text"], .sg-form-section textarea {
+        width: 100%;
+        border: 1px solid #55565a;
+        outline: none;
+        padding: 0 10px;
+        margin-top: 15px;
+    }
+
+    .sg-form-section input[type="file"] {
+        line-height: 1ex;
+        margin-top:15px;
+    }
+
+    .sg-form-section textarea {
+        padding: 5px 10px;
+    }
+
+    .sg-form-section label {
+        font-size:18px;
+        display: block;
+        color: #000;
+        margin-top: 16px;
+        line-height:1em;
+    }
+        .sg-form-section label .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border: 2px solid #959595;
+            border-radius: 50%;
+        }
+            .sg-form-section label .checkmark::after {
+                content: '';
+                position: absolute;
+                box-sizing: border-box;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+            .sg-form-section label input:checked ~ .checkmark {
+                border:2px solid #df6420;
+            }
+                .sg-form-section label input:checked ~ .checkmark::after {
+                    background: #df6420;
+                }
+            .sg-form-section label:hover input:not(:checked) ~ .checkmark::after {
+                background-color: #959595;
+            }
+
+    .sg-form-section i {
+        font-weight:600;
+        color:#959595;
+    }
+
+    .sg-form-section label {
+        font-weight:700;
+    }
+        .sg-form-section input[type=radio] {
+            display:none;
+        }
+        .sg-form-section:first-child label, .sg-form-section:nth-child(2) label {
+            font-weight:normal;
+            margin-top:15px;
+            padding-left:30px;
+            cursor:pointer;
+        }
+
+    .sg-form-section:first-child div:nth-child(2) {
+        margin-top: 18px;
+    }
+
+    .sg-form-section .col-sm-6 div:first-child label {
+        margin-top: 0;
+    }
+
+    .sg-form-section input[type="text"] {
+        height: 44px;
+        line-height: 44px;
+    }
+
+    .sg-form-section:nth-child(2) input[type="text"] {
+        display: inline-block;
+        width: 100px;
+        margin-top: 5px;
+    }
+
+    .sg-form-section textarea {
+        height: 150px;
+        resize: none;
+    }
+
+    .sg-form-section .error_msg {
+        color:red;
+        display:none;
+        margin-top:20px;
+    }
+
+span.tool-tip {
+    cursor: pointer;
+}
+
+    span.tool-tip img {
+        width: 23px;
+        height: 23px;
+    }
+
+.tool-tip-container {
+    background: #e6e6e6;
+    padding: 15px;
+    margin: 1em 0;
+    position: relative;
+    display: none;
+}
+
+    .tool-tip-container:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #e6e6e6;
+        position: absolute;
+        top: -15px;
+        left: 440px;
+    }
+
+.sg-submit {
+    display:inline-block;
+    width:auto;
+    background: none;
+    color: #df6420;
+    font-weight: 700;
+    padding: 10px 30px;
+    outline: none;
+    border: 2px solid #df6420;
+}
+
+    .sg-submit:hover {
+        background: #df6420;
+        color: #fff;
+    }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* CHROME ONLY */
+    #disclaimer {
+        display: none;
+    }
+
+    #seed-guide-intro {
+        margin-top: 0;
+    }
+}
+
+/* CUSTOM SEED GUIDE */
+#sg-selections {
+    display: none;
+    margin-top: 50px;
+}
+    #sg-selections.sg-preview {
+        display:block;
+    }
+    #sg-selections a {
+        display: block;
+        color: #df6420;
+        font-weight: 600;
+        font-style:italic;
+        margin-bottom: 15px;
+        cursor: pointer;
+        text-decoration:underline;
+    }
+
+.sg-selection-header button {
+    margin-top:30px;
+}
+
+.sg-selection-container {
+    background: #fff;
+    padding: 60px;
+    border: 1px solid black;
+}
+
+    .sg-selection-container h2 {
+        font-family: 'GHVeneer';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1em;
+        color: #000;
+    }
+
+    .sg-selection-container button {
+        width: auto;
+    }
+
+@media only screen and (min-width:768px) {
+    .sg-selection-header {
+        display: flex;
+        justify-content: space-between;
+    }
+        .sg-selection-header button {
+            margin-top: 0;
+        }
+}
+
+.sg-selection-inner {
+    display: flex;
+    margin: 0 0 30px;
+    flex-wrap:wrap;
+}
+
+.sg-product {
+    display: flex;
+    width:170px;
+    align-items: center;
+    font-family: 'GHVeneer';
+    font-weight: 400;
+    color: #df6420;
+    font-size: 24px;
+    border: 1px solid #df6420;
+    padding: 10px 15px;
+    margin:30px 25px 0 0;
+}
+
+    .sg-product span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 900;
+        line-height: 1em;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+#seed-guide-form button {
+    color: #df6420;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #df6420;
+    display: flex;
+    width:auto;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+}
+    #seed-guide-form button.sg-download {
+        margin:30px auto;
+    }
+    #seed-guide-form button:hover {
+        color: #fff;
+        background: #df6420;
+    }
+
+/* Seed Guide Preview */
+.sg-preview-container {
+    border:1px solid black;
+    padding:0 30px 30px;
+}
+    .sg-preview-container * {
+        font-family: Arial,sans-serif !important;
+    }
+    .sg-logo, .contact-info {
+    display:table-cell;
+}
+    .contact-info {
+        vertical-align:bottom;
+    }
+    .sg-logo img {
+        max-height: 160px;
+        max-width:300px;
+        margin-right:30px;
+    }
+    .sg-lockup {
+        margin:70px 0;
+    }
+        .sg-lockup img {
+            display: block;
+            width: 244px;
+            margin: 0 auto;
+        }
+    .sg-top .contact-info {
+
+    }
+        .sg-top .contact-info strong {
+            font-weight: 700;
+            font-size: 24px;
+        }
+        .sg-top .contact-info p {
+            margin:0;
+        }
+    .sg-preview-container .sf-result-title span.product, .sg-preview-container .sf-result-content-inner strong:first-child {
+        font-weight: 700;
+    }
+    .guide-info {
+        margin-top:30px;
+    }
+    .sg-legal p {
+        font-size:10px;
+        font-weight:600;
+        line-height:1.5em;
+    }
+        .sg-legal p:first-child {
+            margin-top:0;
+        }
+    .sg-seal {
+        text-align:center;
+        margin:30px 0;
+    }
+        .sg-seal img {
+            width:92px;
+        }
+
+/* PRINT STYLES */
+.page-break {
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    page-break-before: always !important;
+}
+
+.nobreak {
+    page-break-inside: avoid !important;
+}
+
+@media print {
+    .nobreak {
+        page-break-inside: avoid !important;
+    }
+}
+
+@media print {
+    @page {
+        size: 8.5in 11in;
+        margin: 0;
+        padding-top: 30px;
+        orphans: 5;
+        widows: 5;
+    }
+
+    body, html {
+        margin-top: 0%;
+        display: block;
+        -webkit-print-color-adjust: exact;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+
+    .page-content {
+        padding:0;
+    }
+
+    header, footer, .sg-selection-container, #sg-selections, #seed-guide-intro, .sg-button-row {
+        display: none!important;
+    }
+
+    #seed-guide-form {
+        background-color:#fff;
+        background-image:none!important;
+        padding-top:0;
+    }
+        .sf-result {
+            background-size:cover!important;
+        }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .sg-lockup {
+        padding:70px 0;
+        margin:0;
+    }
+
+    #sg-preview .col-sm-10 {
+        width: 100%;
+        left: 0;
+    }
+
+    #sg-preview {
+        position: relative;
+    }
+
+    .sg-preview-container {
+        border: none;
+    }
+}

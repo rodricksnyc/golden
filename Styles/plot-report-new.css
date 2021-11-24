@@ -1,0 +1,170 @@
+/* Plot 
+====================================*/
+
+#plot-report-page {
+    padding-top: 30px;
+}
+
+#plot-detail .grower {
+    margin:1.5em 0;
+}
+    #plot-detail .grower .name {
+        font-weight:700;
+        font-size:22px;
+    }
+
+/* TABLE */
+#plot-report table {
+    margin-bottom: 30px;
+}
+#plot-report thead {
+    border-bottom:2px solid #e0e0e0;
+}
+    #plot-report thead th {
+        text-align:center;
+        padding:10px 5px;
+    }
+        #plot-report thead th > div {
+            display:inline-block;
+        }
+       #plot-report thead th > div:before {
+                content:"|";
+                display:inline-block;
+                margin:0 5px;
+            }
+                #plot-report thead th > div:first-child:before {
+                    display:none;
+                }
+        #plot-report thead th:nth-child(5), #plot-report thead th:nth-child(6) {
+            display:none;
+        }
+        #plot-report thead th:nth-child(2) {
+            text-align:left;
+        }
+
+#plot-report td {
+    padding:10px 5px;
+    font-weight:bold;
+}
+    #plot-report tbody tr:nth-child(odd) {
+        background:#f4f4f4;
+    }
+        #plot-report tbody tr td {
+            text-align:center;
+        }
+             #plot-report tbody tr td:nth-child(5), #plot-report tbody tr td:nth-child(6) {
+                display:none;
+            }
+            #plot-report tbody tr td:nth-child(2) {
+                text-align:left;
+            }
+            #plot-report tbody tr td:nth-child(2) > div:not(:nth-child(2)) {
+                font-weight:400;
+            }
+            #plot-report tbody tr:not(.competitor) td:nth-child(2) > div:nth-child(2) {
+                color:#cd5d28;
+            }
+
+
+#plot-report tr[data-brand="ghs"]:hover,
+/*#plot-report tr[data-brand="nk"]:hover,*/
+#plot-report tr[data-brand="enogen"]:hover {
+    background:#e0e0e0;
+    cursor: pointer;
+}
+
+
+#plot-report tr[data-brand="ghs"] td a {
+    color:#cd5d28;
+}
+#plot-report tr[data-brand="enogen"] td a {
+    color:#cd5d28;
+}
+
+#plot-report tr[data-brand="nk"] td a,
+#plot-report tr[data-brand="competitor"] td a {
+    color:#000000;
+}
+
+/*#plot-report tr[data-brand="nk"] td a {
+    text-decoration: underline;
+}*/
+    #plot-report tr[data-brand="nk"] td a:hover, 
+    #plot-report tr[data-brand="competitor"] td a:hover {
+        text-decoration: none;
+    } 
+
+#plot-report tr[data-brand="ghs"]:hover a,
+/*#plot-report tr[data-brand="nk"]:hover a,*/
+#plot-report tr[data-brand="enogen"]:hover a
+ {
+    text-decoration: underline;
+}
+
+#plot-report tfoot {
+    background:#e0e0e0;
+}
+    #plot-report tfoot td {
+        text-align:center;
+    }
+        #plot-report tfoot td:nth-child(5),#plot-report tfoot td:nth-child(6) {
+            display:none;
+        }
+        #plot-report tfoot td:nth-child(2) {
+            text-align:left;
+        }
+
+ /* SIDEBAR */
+.sidebar h2 {
+    margin-top:0;
+}
+
+/* SHARING */
+.article-share {
+    text-align:center;
+    margin: 0 0 40px 0;
+}
+
+    .article-share a {
+        cursor: pointer;
+    }
+    .article-share span {
+        color:#cd5d28;
+    }
+    .article-share a:first-child {
+        display:none;
+    }
+    .article-share a:nth-child(2) {
+        margin-left:0;
+    }
+
+/* MEDIA QUERIES */
+@media only screen and (min-width:768px) {
+    #plot-report thead th:nth-child(5), #plot-report thead th:nth-child(6), #plot-report tbody tr td:nth-child(5), #plot-report tbody tr td:nth-child(6), #plot-report tfoot td:nth-child(5), #plot-report tfoot td:nth-child(6) {
+        display:table-cell;
+    }
+
+    .article-share {
+        margin:0;
+        text-align:left;
+    }
+        .article-share a:first-child {
+            display:inline-block;
+        }
+        .article-share a:nth-child(2) {
+            margin-left:15px;
+        }
+}
+
+
+/*  Medium devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+
+/*  Large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+

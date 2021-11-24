@@ -1,0 +1,36 @@
+﻿.page-content{
+    padding-top: 0px;
+}
+#seeding-rate-intro{
+    padding-bottom: 25px;
+}
+header, #seeding-rate-intro p, #seeding-rate-intro hr, #seeding-rate-hero, #seeding-rate-resources, footer, #site-survey{
+    display: none!important;
+}
+#gh-print-branding{
+    display: inline!important;
+}
+section.orange, .orange .arch-element{
+    background-color: initial!important;
+}
+.calculator-wrapper{
+    border: initial;
+    box-shadow: initial;
+    margin: 0;
+    /*width: 100%!important;*/
+    position: relative;
+    left: 0;
+}
+
+h1{
+    font-size: 2rem;
+    margin: 0;
+}
+/*p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}*/
+#seeding-rate-legal p {
+    font-size: 8px;
+    line-height: 12px;
+}

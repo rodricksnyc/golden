@@ -1,0 +1,19 @@
+﻿.ui-autocomplete
+        {
+            height: auto;
+            max-height: 200px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .ui-widget
+        {
+            font-family: 'Open Sans' , Arial, sans-serif;
+            font-size: 18px;
+        }
+
+ .pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}

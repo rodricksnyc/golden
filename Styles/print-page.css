@@ -1,0 +1,77 @@
+﻿@media print {
+    header,
+    footer,
+    #hybrid-search,
+    hr,
+    #dvTechSheet,
+    #mainBody_dvTechSheet,
+    .scroll-arrow,
+    #seed-Advisors a {
+        display: none !important;
+    }
+
+    .utility-buttons {
+        float: none;
+        display: block;
+        opacity: 0;
+    }
+
+    .page-content {
+        padding: 10px 0 0;
+    }
+
+    #social-share {
+        display: none;
+    }
+
+    #plot-detail .col-sm-8, #plot-report .col-sm-8 {
+        width: 100%;
+    }
+
+
+    .detail-tile {
+        height: auto !important;
+    }
+
+    .row.tiles > div {
+        width: 75% !important;
+        float: none;
+    }
+
+    #plot-detail .hero .col-sm-12 {
+        width: 100%;
+        display: block;
+    }
+
+    #plot-detail .hero span.sectionTitle {
+        color: #000;
+        display: block !important;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+
+    #plot-report thead th:nth-child(5),
+    #plot-report thead th:nth-child(6),
+    #plot-report tbody tr td:nth-child(5),
+    #plot-report tbody tr td:nth-child(6),
+    #plot-report tfoot td:nth-child(5),
+    #plot-report tfoot td:nth-child(6) {
+        display: table-cell;
+    }
+
+    #seed-Advisors {
+        height: 600px;
+    }
+
+    .headerlogo {
+        display: block;
+    }
+}
+
+@media screen {
+    .headerlogo {
+        display: none;
+    }
+}

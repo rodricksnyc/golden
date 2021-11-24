@@ -1,0 +1,44 @@
+﻿<div class="youtube-video-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <div class="youtube-video-inner">
+                    <div class="youtube-video-frame">
+                        <div class="video-title"></div>
+                        <div id="player"></div>
+                        <div class="video-description"></div>
+                        <span class="close">x</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="youtube-videos"></div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script type="text/javascript">
+    function appendScript(filepath) {
+        if ($('head script[src="' + filepath + '"]').length > 0)
+            return;
+
+        var ele = document.createElement('script');
+        ele.setAttribute("type", "text/javascript");
+        ele.setAttribute("src", filepath);
+        $('head').append(ele);
+    }
+
+    function appendStyle(filepath) {
+        if ($('head link[href="' + filepath + '"]').length > 0)
+            return;
+
+        var ele = document.createElement('link');
+        ele.setAttribute("type", "text/css");
+        ele.setAttribute("rel", "Stylesheet");
+        ele.setAttribute("href", filepath);
+        $('head').append(ele);
+    }
+
+    appendScript('/youtubeplayer/js/youtube-player.js?v=1.0.2');
+    appendStyle('/youtubeplayer/css/youtube-player.css?v=1.0.1');
+</script>

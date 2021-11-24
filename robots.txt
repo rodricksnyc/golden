@@ -1,0 +1,2 @@
+﻿User-agent: *
+Sitemap: https://www.goldenharvestseeds.com/sitemap-ghs-index.xml

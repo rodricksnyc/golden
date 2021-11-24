@@ -1,0 +1,98 @@
+﻿#search-result-page {
+}
+
+	#search-result-page h1, #search-result-page h2 {
+		margin-bottom: 20px;
+	}
+
+	#search-result-page .new-search-cont {
+	}
+
+		#search-result-page .new-search-cont input {
+			float: left;
+		}
+
+			#search-result-page .new-search-cont input#ss360search {
+				border: 1px solid #ccc;
+				padding: 8px 10px;
+				width: 80%;
+				margin-bottom:20px;
+			}
+
+			#search-result-page .new-search-cont input#ss360Button {
+				background-color: #d25f15;
+				border: none;
+				color: #fff;
+				font-weight: bold;
+				padding: 9px 12px;
+			}
+
+#ss360-search-result-heading a,
+#ss360-search-result-heading a:link,
+#ss360-search-result-heading a:visited,
+#ss360-search-result-heading a:focus {
+	text-decoration: none;
+	font-weight: normal;
+	color: #55565a;
+	border: none;
+	cursor: default;
+	outline: 0;
+}
+
+span.ss360-highlight {
+	font-weight: bold;
+}
+
+.content-group-heading span {
+	font-weight: normal;
+}
+
+.ss360-suggests.ss360-hidden {
+	display: none;
+}
+
+.ss360-top-nav {
+	display: none;
+}
+
+#ss360-search-result-heading a span.count {
+	display: block;
+	font-size: 18px;
+}
+
+#ss360-search-result-heading a span.term {
+	font-weight: bold;
+}
+
+#ss360-layer ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+#ss360-layer article p {
+	font-size: 16px;
+}
+
+#ss360-layer article a:hover {
+	opacity: .7;
+}
+
+#ss360-layer button.ss360-more-results,
+#ss360-layer button.ss360-more-results:focus {
+	background-color: #d25f15;
+	color: #fff;
+	border: none;
+	font-size: 15px;
+	font-weight: 700;
+	padding: 8px 30px;
+	width:auto;
+}
+
+#ss360-layer .ss360-group {
+	margin-bottom: 50px;
+}
+
+#results .ss360-suggests a {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}

@@ -1,0 +1,305 @@
+.small {
+	font-size: 15px;
+	line-height: 17px;
+}
+
+address {
+	font-style: normal;
+}
+
+.h3 span {
+	font-size: 18px;
+	color: #55565a;
+	font-weight: 400;
+}
+
+.block-detail {
+	margin-bottom: 30px;
+}
+
+@media(min-width: 768px) {
+	.block-detail {
+		margin-bottom: 0;
+	}
+
+	.block-detail-margin {
+		margin-bottom: 30px;
+	}
+}
+
+.block-detail > img,
+.block-detail > div {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+}
+
+.block-detail > img {
+	width: 27px;
+	padding-right: 8px;
+	margin-top: 4px;
+}
+
+.block-detail > div {
+	width: calc(100% - 32px);
+}
+
+.phone-link {
+	color: #55565a;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+hr.dark {
+	border-top: 1px solid #55565a;
+	margin: 15px 0 45px 0;
+}
+
+@media(min-width: 768px) {
+	hr.dark {
+		margin-top: 45px;
+	}
+}
+
+.form-holder {
+	font-size: 16px;
+	background-color: #f5f5f5;
+	padding: 30px;
+	margin-top: 15px;
+}
+
+@media(min-width: 768px) {
+	.form-holder {
+		padding: 60px 30px;
+	}
+
+	.form-wrap {
+		padding-left: 0;
+		padding-right: 0;
+		margin: 0 auto;
+	}
+}
+
+.row-margin-bottom {
+	margin-bottom: 20px;
+}
+
+.step-two {
+	margin-top: 30px;
+	opacity: .5;
+}
+
+.step-two.active {
+	opacity: 1;
+}
+
+label {
+	display: block;
+	width: 100%;
+}
+
+.required-label::before {
+	content: '*';
+	color: #d44040;
+}
+
+.label-inline {
+	display: inline-block;
+}
+
+.label-checkbox{
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 15px;
+}
+
+.label-checkbox::before {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	background-color: #fff;
+	border: 1px solid #55565a;
+}
+
+.label-checkbox span {
+	color: #d44040;
+	margin-left: 10px;
+}
+
+input[type=checkbox]:checked + label::before {
+  content: url(../images/icon-check-sm.jpg);
+  font-family: Arial;
+  color: #55565a;
+  font-size: 30px;
+  text-align: center;
+  line-height: 19px;
+}
+
+@media(min-width: 992px) {
+	label {
+		text-align: right;
+		padding: 10px 0;
+		max-width: 160px;
+		float: right;
+	}
+
+	.label-left,
+	.label-checkbox {
+		text-align: left;
+		max-width: 100%;
+		float: none;
+	}
+
+	.label-left {
+		padding-top: 0;
+	}
+
+	.label-checkbox {
+		padding-top: 0;
+		padding-bottom: 0;
+		width: auto;
+	}
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	border: 1px solid #a5a7af;
+	background-color: #fff;
+	border-radius: 0;
+	-webkit-appearance: none;
+	appearance: none;
+	padding: 10px;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+textarea {
+	resize: none;
+	height: 165px;
+}
+
+button.disabled {
+	opacity: .5;
+	cursor: default;
+}
+
+.select-box {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+	height: 46px;
+	background-color: #fff;
+	border-right: 1px solid #a5a7af;
+}
+.select-box::after {
+	text-align: center;
+	content: url(../images/arrow-down-select.png);
+	border-left: 1px solid #a5a7af;
+    width: 40px;
+    height: 46px;
+    margin-top: -46px;
+    float: right;
+}
+.select-box select {
+	width: calc(100% + 30px);
+	background-color: transparent;
+	height: 46px;
+	line-height: 46px;
+	border: 1px solid #a5a7af;
+	margin: 0;
+	padding: 0 10px;
+	border-radius: 0;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.other-relationship {
+	margin-top: 20px;
+}
+
+@media(min-width: 992px) {
+	.padding-right-zero {
+		padding-right: 0;
+	}
+}
+
+.error-wrap {
+	position: relative;
+	overflow: visible;
+}
+
+.error-wrap::after {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.error-wrap-select::after {
+	right: 50px;
+}
+
+.error-wrap[data-error="no-error"]::after {
+	content: url(../images/icon-no-error.png);
+}
+
+.error-wrap[data-error="error"]::after {
+	content: url(../images/icon-error.png);
+}
+
+@media(min-width: 992px) {
+	.error-wrap::after {
+		right: -35px;
+	}
+}
+
+.error-wrap-inline {
+	display: inline-block;
+}
+
+
+
+.other-relationship::after {
+	top: 35px;
+}
+@media(min-width: 992px) {
+	.other-relationship::after {
+		top: 45px;
+	}
+}
+
+.thank-you {
+	display: none;
+}
+
+.thank-you h3 {
+	margin-bottom: 0;
+}
+
+.thank-you p:first-of-type {
+	margin-top: 0;
+}
+
+.disclaimer p {
+	font-size: 12px;
+	line-height: 17px;
+	padding: 30px 0 0 30px;
+}
+
+
+.footer-container strong
+{
+    color:#55565a !important;
+}
+
+select::-ms-expand {
+    display: none;
+}

@@ -1,0 +1,17 @@
+﻿.calculator-wrapper {
+    /*height: 850px;*/
+    height:1291px;
+    width: 570px;
+    text-align: center;
+    overflow: hidden;
+    margin: 30px auto 0 auto;
+    max-width: 100%;
+}
+.calculator-wrapper iframe{
+    height: 100%;
+}
+
+.calc-fix {
+    text-align: center;
+    width: 100%;
+}

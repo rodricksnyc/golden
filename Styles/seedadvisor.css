@@ -1,0 +1,450 @@
+﻿
+#bsa-hero .hero-holder{
+    background-position: center bottom;
+}   
+
+#bsa-siz-reasons{}
+
+#bsa-siz-reasons .content-top {
+    margin-bottom: 50px;
+}
+#bsa-siz-reasons .bene-single{
+    margin-bottom: 30px;
+}
+#bsa-siz-reasons .bene-single img {
+    width: 20%;
+    height: auto;
+    float: left;
+    margin-right: 2%
+}
+#bsa-siz-reasons .bene-single p {
+    margin-top:0;
+    width: 75%;
+    float: left;
+}
+#bsa-siz-reasons .bene-single p span {
+    font-weight: bold;
+    color: #d25f15;
+}
+
+#bsa-form-cont{}
+#bsa-form {}
+
+.form-img img { 
+    margin-bottom: 20px;
+}
+
+#bsa-form h2 {
+    margin-bottom: 30px;
+}
+
+#bsa-form input {
+    border: 1px solid #a5a7af;
+    margin-top: 25px;
+    color: #000;
+}
+
+#bsa-form input.error {
+    border: 1px solid red;
+
+}
+
+#bsa-form label {
+    color:#a5a7af;
+    position: absolute;
+    padding: 8px 15px;
+    background-color: #fff;
+    font-size: 1.5rem;
+    top: 28px;
+    left: 20px;
+    cursor: pointer;
+}
+
+#bsa-form label.focused {
+    font-size: 1.2rem;
+    top: 9px;
+    left: 6px;
+    padding: 4px 8px;
+    cursor: default;
+}
+
+#bsa-submit {
+    margin: 25px 0;
+}
+
+#bsa-form p.legal {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+#bsa-form p.legal a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+
+#bsa-form p.thank-you {
+    font-weight: bold;
+}
+
+#bsa-form p.unsupported-region {
+    font-weight: bold;
+    color: red;
+}
+
+#bsa-testimonials{}
+#bsa-testimonials h2 {
+    margin-bottom: 25px;
+}
+
+#bsa-testimonials .testimonial-single{}
+#bsa-testimonials .testimonial-single h3 {
+    font-size: 1.85rem;
+    line-height: 2.5rem;
+    text-transform: none;
+}
+#bsa-testimonials .testimonial-single h3 span{
+    color: #000;
+}
+
+#bsa-portfolio{}
+
+#bsa-portfolio .seeds-cont,
+#bsa-portfolio .traits-cont{
+    padding: 30px 0;
+}
+
+#bsa-portfolio .seeds-cont h2,
+#bsa-portfolio .traits-cont h2 {
+    margin-bottom: 20px;
+}
+
+
+#bsa-portfolio .seeds-cont .seeds-single,
+#bsa-portfolio .traits-cont .seeds-single {
+    padding-bottom: 25px;
+}
+ 
+#bsa-faqs{}
+
+#bsa-faqs .bsa-qa {
+    padding-top: 30px;
+}
+
+#bsa-faqs .bsa-qa-single .single-q {
+    color: #d25f15;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#bsa-faqs .bsa-qa-single .single-a {
+    margin-top: 0;
+}
+
+@media only screen and (min-width:768px) {
+    #bsa-testimonials .testimonial-single h3 span{
+        display: block;
+    }
+
+    #bsa-portfolio .seeds-cont .seeds-single,
+    #bsa-portfolio .traits-cont .seeds-single {
+        padding-bottom: 5px;
+    }
+ 
+}
+@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 1200px) {
+    #bsa-intro h1 {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/*Seed Advisor Testimonial Videos*/
+
+#videoModal-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#videoModal {
+background-color: white;
+max-width: 585px;
+display: block;
+position: relative;
+padding: 15px;
+}
+
+#modalClose {
+top: 0;
+right: 0;
+display: block;
+position: absolute;
+margin-right: 5px;
+padding: 10px;
+}
+
+#modalClose:hover {
+cursor: pointer;
+color: gray;
+}
+
+#modalTitle {
+margin-bottom: 15px;
+font-size: 18px;
+line-height: 26px;
+color: #55565a;
+font-weight: 700;
+}
+
+#modalContent iframe {
+margin: 0 auto;
+display: block;
+}
+
+#modalDescription {
+padding: 15px 0 0 0;
+font-size: 16px;
+line-height: 20px;
+color: #55565a;
+}
+
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.give-me-some-room {
+margin: 35px auto;
+}
+
+.category-heading {
+border-top: 1px solid #e5e5e5;
+padding-top: 30px;
+margin: 30px 15px;
+}
+
+.intro-paragraph {
+margin: 45px 15px 15px 15px;
+}
+
+.disabled {
+pointer-events: none;
+}
+
+.resource-card {
+margin-bottom: 30px;
+position: relative;
+}
+/* .resource-card a.primary:hover{
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+} */
+.resource-card a.primary {
+text-decoration: none;
+display: block;
+background-color: #62801e;
+/* margin-top: 5px; */
+padding: 0 0 5px 0;
+height: 100%;
+background: #f4f4f4;
+}
+
+.resource-card a.primary:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+
+.resource-card figure {
+overflow: hidden;
+background: #d25f15;
+}
+
+.resource-card a.primary img {
+transition: 0.25s;
+max-width: 100%;
+}
+
+.resource-card a.primary:hover img {
+opacity: 0.5;
+transform: scale(1.05);
+}
+
+.resource-card figcaption {
+background-color: #f4f4f4;
+font-size: 15px;
+}
+
+.resource-card a.primary:hover figcaption {
+background-color: #e5e5e5;
+}
+
+.resource-card figcaption.title {
+padding: 10px 15px 5px 15px;
+font-weight: bold;
+}
+
+.resource-card figcaption.reference-number {
+padding: 0 15px;
+margin-bottom: 3px;
+}
+
+.resource-card figcaption.reference-number span {
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
+.resource-card figcaption.description {
+padding: 0 15px 10px 15px;
+}
+
+.resource-card figcaption.description span {
+    font-size: 15px;
+}
+
+.resource-card figcaption.type {
+padding: 0 10px 0 15px;
+min-height: 25px;
+}
+
+.resource-card i.fas, .resource-card i.fab {
+color: #55565a;
+transform: scale(0.75);
+float: right;
+position: relative;
+/*top: 5px;*/
+transition: 0.25s;
+margin-right: 3px;
+}
+/* .resource-card a.primary:hover figcaption i.fas{
+margin-right: 0px;
+} */
+.resource-card figcaption span {
+color: #55565a;
+/* text-decoration: none; */
+display: block;
+line-height: 1.2;
+}
+
+.resource-card figcaption small {
+color: #55565a;
+opacity: 0.8;
+font-style: italic;
+}
+/* .resource-card a:hover figcaption span{
+text-decoration: underline;
+} */
+.video-duration {
+position: absolute;
+top: 10px;
+left: 25px;
+background-color: rgba(0,0,0,0.5);
+color: white;
+font-size: 10px;
+padding: 3px 10px;
+}
+
+
+.resource-card-container {
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+flex-wrap: wrap;
+margin:0 -15px;
+}
+
+.resource-card-container > .resource-card {
+display: flex;
+flex-direction: column;
+}
+
+.resource-card-container ul {
+list-style-type: none;
+margin: 0;
+}
+
+/* .resource-card.with-secondary {
+margin-bottom: 60px;
+} */
+.resource-card a.secondary {
+display: block;
+width: 100%;
+background-color: #e5e5e5;
+padding: 5px 15px;
+text-decoration: none;
+color: #55565a;
+font-size: 12px;
+/* position: relative;
+top: -5px; */
+border-top: 1px solid white;
+}
+
+.resource-card a.secondary:hover {
+background-color: #dedede;
+}
+
+.resource-card a.secondary i.fas {
+font-size: 15px;
+margin-right: 0;
+}
+
+#advisor-video h2{
+    margin-bottom:30px;
+}
+
+#advisor-video figure{
+    position:relative;
+}
+
+#advisor-video figure:before {
+    content: "";
+    background-image: url("/images/seed-advisor/play-btn.svg");
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    opacity: .6;
+    top: 25%;
+    left: 25%;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index:100;
+}
+
+
+.video-responsive{
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+.video-responsive iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}

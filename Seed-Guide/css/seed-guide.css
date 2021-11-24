@@ -1,0 +1,59 @@
+﻿.orange a.btn-default{
+    color: white;
+    border-color: white;
+}
+.orange a.btn-default:after{
+    background-image: url(../../../Images/global/cta_arrow_white.svg);
+}
+
+.orange h2{
+    color: white;
+}
+.orange p{
+    color: white;
+}
+
+.orange ul.feature-list{
+    columns: 2;
+    list-style-type: none;
+    padding: 0;
+}
+@media only screen and (max-width: 400px){
+    .orange ul.feature-list{
+        columns: initial;
+    }
+}
+.orange ul.feature-list li{
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: 'GHVeneer';
+    font-size: 20px;
+}
+.orange ul.feature-list li:before{
+    content: " ";
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 100px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#three-ctas img{
+    max-width: 100px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+#seed-advisor .btn-default{
+    text-transform: initial;
+}
+
+.legal-copy{
+    line-height: 1.75rem;
+}
+
+.pdff-container{
+    height: 80vh!important;
+}

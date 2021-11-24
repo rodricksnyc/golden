@@ -1,0 +1,363 @@
+﻿#product-finder {
+    background-image:url(../Images/product-finder/top-texture.jpg);
+    background-repeat:repeat-x;
+}
+    #sf-intro h1 {
+        font-family: 'GHVeneer';
+        color: #000;
+        font-size:60px;
+        line-height:1em;
+        font-weight:normal;
+        margin:50px 0;
+    }
+    #sf-intro p {
+        font-weight:600;
+        margin:0;
+    }
+    #sf-results {
+        margin:50px 0 100px;
+    }
+        #sf-results div[class^="col-md-"] > strong {
+            font-family: 'GHVeneer';
+            font-size:30px;
+            font-weight:normal;
+        }
+        #sf-results .filter-container {
+            width:100%;
+            background-color:#fff;
+            margin-bottom:30px;
+        }
+            #sf-results .filter-section {
+                border:1px solid black;
+                border-top:none;
+            }
+                #sf-results .filter-section a.clear-filters {
+                    display: block;
+                    color: #df6420;
+                    font-size: 18px;
+                    font-weight: 690;
+                    text-align: center;
+                    text-decoration: underline;
+                    padding: 20px;
+                }
+                #sf-results .filter-section:first-child {
+                    border-top:1px solid black;
+                    background-image: url(../Images/product-finder/top-texture.jpg);
+                    background-repeat:repeat-x;
+                    background-position:center top;
+                    background-size: 114px 50px;
+                }
+                #sf-results .filter-section .filter-title {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    font-family: 'GHVeneer';
+                    font-size: 24px;
+                    color: #df6420;
+                    cursor: pointer;
+                    padding: 15px;
+                }
+                    #sf-results .filter-section .filter-title:after {
+                        content: "+";
+                        font-weight:bold;
+                        display: block;
+                        font-size: 28px;
+                        position: absolute;
+                        top: 50%;
+                        right:20px;
+                        transform: translateY(-50%);
+                    }
+                        #sf-results .filter-section.active .filter-title:after {
+                            content: "–";
+                        }
+                #sf-results .filter-section .filter-content {
+                    display:none;
+                    padding:0 20px 20px;
+                }
+                    #sf-results .filter-section.active .filter-content {
+                        display:block;
+                    }
+                #sf-results .filter-section .filter-content label {
+                    display: block;
+                    font-size: 18px;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+                    #sf-results .filter-section .filter-content label:first-child {
+                        margin-top: 0;
+                    }
+                #sf-results .filter-section input[type="checkbox"] {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+                #sf-results .filter-section .checkmark {
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #fff;
+                    border: 1px solid #b7b7b7;
+                }
+                    #sf-results .filter-section input:checked + .checkmark {
+                        border:1px solid #df6420;
+                        background-image:url(../Images/product-finder/checkmark.png);
+                        background-position:center center;
+                        background-size:10px 7px;
+                        background-repeat:no-repeat;
+                    }
+                #sf-results .filter-section .filter-inputs {
+                    display:flex;
+                    align-items:center;
+                }
+                    #sf-results .filter-section .filter-inputs {
+                        margin-bottom:20px;
+                    }
+                        #sf-results .filter-section .filter-inputs input {
+                            border:2px solid black;
+                            font-weight:700;
+                            min-width:0;
+                        }
+                        #sf-results .filter-section .filter-inputs span {
+                            padding:0 20px;
+                            font-weight:600;
+                        }
+                        #product-finder button {
+                            color: #df6420;
+                            font-size:16px;
+                            font-weight: 600;
+                            border: 1px solid #df6420;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                            #product-finder button.remove-selections {
+                                display:none;
+                            }
+                            #product-finder button:hover {
+                                color: #fff;
+                                background: #df6420;
+                            }
+                            #product-finder button:disabled {
+                                background: #f3f3f3;
+                                color: #9a9b9d;
+                                border: 1px solid #9a9b9d;
+                                cursor: default;
+                            }
+
+@media only screen and (min-width:992px) {
+    #sf-results .filter-container {
+        margin-bottom:0;
+    }
+}
+
+.sf-result {
+    display:flex;
+    height:100%;
+    width:100%;
+    background-color:#fff;
+    background-image:url(../Images/product-finder/top-texture.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    flex-direction:column;
+    border:1px solid black;
+    padding:20px;
+    margin-top:30px;
+}
+    .col-md-6:first-child .sf-result {
+        margin-top: 0;
+    }
+    .sf-result-title {
+        display:flex;
+        align-items:center;
+    }
+        .sf-result-title span {
+            display:block;
+        }
+            .sf-result-title a {
+                position:relative;
+                font-family: 'GHVeneer';
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 1em;
+                color: #df6420;
+                text-decoration: underline;
+                cursor:pointer;
+            }
+                .sf-result.brand-enogen .sf-result-title a {
+                    color:#459339;
+                }
+            .sf-result-title span.rm {
+                font-size:18px;
+                font-weight:700;
+                margin-left:auto;
+            }
+            .sf-result-title span.new {
+                font-size: 18px;
+                font-weight: 700;
+                font-style:italic;
+                color:#fff;
+                background:#df6420;
+                padding:3px 15px;
+                margin:0 10px 0 -30px;
+            }
+                .sf-result.brand-enogen .sf-result-title span.new {
+                    background:#459339;
+                }
+    .sf-result-content-inner strong {
+        display:block;
+        font-size:12px;
+    }
+
+        .sf-result-content-inner strong:first-child {
+            font-family: 'GHVeneer';
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1em;
+            margin-top: 10px;
+        }
+    .sf-result-content ul {
+        padding-left:20px;
+    }
+
+@media only screen and (min-width:992px) {
+    .sf-result {
+        background-size: 452px 200px;
+    }
+}
+
+.sf-result-content-inner span {
+    font-size: 12px;
+}
+        .sf-result .product-links {
+            margin-top:auto;
+        }
+            .sf-result .product-links a {
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                color: #df6420;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+                .sf-result.brand-enogen .product-links a {
+                    color:#459339;
+                }
+            .sf-result .sg-button span {
+                background: #df6420;
+                width: 16px;
+                height: 16px;
+                border-radius: 16px;
+                font-weight: 600;
+                font-size: 0;
+                margin-right: 5px;
+            }
+                .sf-result .sg-button span:after {
+                    content:"+";
+                    color:#fff;
+                    font-size:2rem;
+                    position:relative;
+                    top:-6px;
+                }
+                    .sf-result button.selected span:after, .sf-result button.sg-add:hover span:after {
+                        content:"-";
+                        top: -8px;
+                        color: #df6420;
+                    }
+                #product-finder button.sg-add {
+                    margin-top: 10px;
+                    display: none;
+                }
+                    #product-finder button.sg-add.selected {
+                        background:#df6420;
+                        color:#fff;
+                    }
+                        #product-finder button.sg-add:hover span, #product-finder button.sg-add.selected span {
+                            background: #fff;
+                            color: #df6420;
+                        }
+.sf-count {
+    display:flex;
+    font-weight:700;
+    font-style:italic;
+    margin:50px 0 15px;
+    justify-content:center;
+}
+a.load-more {
+    border: 1px solid #df6420;
+    color: #df6420;
+    padding: 5px 15px;
+    text-decoration: none;
+    margin-top: 0;
+    cursor: pointer;
+}
+    a.load-more:hover {
+        background: #df6420;
+        color: #fff;
+        cursor: pointer;
+    }
+
+@media only screen and (min-width: 992px) {
+    .col-md-6:nth-child(-n+2) .sf-result {
+        margin-top: 0;
+    }
+    #sf-results .filter-section .checkmark {
+        top: 5px;
+        left: 0;
+        height: 18px;
+        width: 18px;
+    }
+}
+
+
+.product-finder-legal {
+    padding-top:45px;
+    margin-top:45px;
+    border-top:2px solid black;
+}
+    .product-finder-legal p {
+        font-size:12px;
+        line-height:1.5em;
+    }
+        .product-finder-legal p:first-child {
+            margin-top:0;
+        }
+    .product-finder-legal .legal-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+        .product-finder-legal .legal-images img {
+            height: 50px;
+            width: auto;
+            margin-right: 10px;
+            flex-shrink:0;
+        }
+
+        .product-finder-legal .legal-images .break {
+            flex-basis: 100%;
+            height: 1.5rem;
+        }
+/*New css added-Akshita*/
+
+.dvLoadingImage{
+    position:fixed;top:0px;right:0px;width:100%;height:100%;background-color:#FFF;
+    background-image:url('../../images/GHLoader.gif'); background-repeat:no-repeat;background-position:center;z-index:10000000;  
+    opacity: 0.4;
+}
+ 
+
+    .sf-result-title span.newicon {
+        right: 120px;
+        font-style: italic;
+        line-height: 34px;
+        padding-right: 18px;
+        display: block;
+        width: 66px !important;
+        margin-left: 50px;
+    }

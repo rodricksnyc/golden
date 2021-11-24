@@ -1,0 +1,110 @@
+﻿ .ui-autocomplete
+        {
+            height: auto;
+            max-height: 200px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .ui-widget
+        {
+            font-family: 'Open Sans' , Arial, sans-serif;
+            font-size: 18px;
+        }
+        
+        .dvLoadingImage
+        {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #FFF;
+            background-image: url('../../images/GHLoader.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10000000;
+            opacity: 0.4;
+        }
+        
+        #hybrid-search input[type="button"]
+        {
+            background: #000 url('../../images/search.png') no-repeat center;
+            background-size: 20px 21px;
+            border: none;
+            width: 45px;
+            height: 45px;
+            display: inline-block;
+            margin-left: -5px;
+            outline: none;
+            float: none;
+        }
+        
+         #plantCharacteristicsDiv .col-xs-push-1 
+        {
+            left:0%
+        }
+       
+       .productStyles
+        {
+         font-size:18px !important;
+         line-height:26px;
+        }
+        .qualtrics
+        {
+            overflow: hidden;
+            height: 241px;
+            width: 316px;
+            border: 0px none #ffffff !important ;
+        }
+        
+        
+   .ios
+   {
+       padding:0px 0px 0px 0px !important;
+       margin :0px 0px 0px 0px !important;
+       
+   }
+    #Questions
+    {
+       padding:0px 0px 0px 0px !important;
+       margin :0px 0px 0px 0px !important;
+    }
+    #SurveyEngineBody
+    {
+       padding:0px 0px 0px 0px !important;
+       margin :0px 0px 0px 0px !important;
+    }
+    .Inner BorderColor Browser
+    {
+    padding:0px 0px 0px 0px !important;
+    margin :0px 0px 0px 0px !important;
+    }
+    .lgl-info p {
+    font-size: 12px;
+    line-height: 17px;
+}
+/*this is content for the Farm journal add on section*/
+
+#featuredContent,
+.eblast-row {
+    display: none;
+}
+
+.cont-row, .eblast-row {
+    margin-bottom: 25px;
+}
+
+    .cont-row .col-sm-4 {
+        margin-top: 30px;
+    }
+
+        .cont-row .col-sm-4:first-child {
+            margin-top: 0;
+        }
+
+@media only screen and (min-width: 768px) {
+    .cont-row .col-sm-4 {
+        margin-top: 0;
+    }
+}
+    

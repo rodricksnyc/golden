@@ -1,0 +1,138 @@
+﻿section#hero {
+    background-color: gray;
+}
+.mobile-hero-holder {
+    min-height: 265px;
+    background-size: cover;
+    background-position-y: -30px;
+}
+#map img {
+    margin: 55px 0;
+}
+.farmer-row {
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    padding: 10px;
+}
+.farmer-row p {
+    margin: 0;
+}
+.farmer-icon {
+    padding: 10px;
+    box-sizing: content-box;
+}
+    .farmer-icon img {
+        border-radius: 50%;
+        width: 10em;
+    }
+    .farmer-icon a:hover {
+        text-decoration: none;
+    }
+.farmer-card {
+    margin-bottom: 1em;
+}
+.farmer-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+    .farmer-desc h3 a {
+        color: #d25f15;
+    }
+        .farmer-desc h3 a:hover {
+            color: #ba4d07;
+        }
+.farmer-blog {
+    background: #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: inset 0 1em 1em -1em rgba(198, 198, 198, .5);
+}
+    .farmer-blog .carousel-inner .row {
+        padding: .5em 1.5em;
+    }
+.blog-post a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    font-weight: bold;
+    text-decoration: none;
+}
+    .blog-post p {
+        color: #337ab7;
+    }
+        .blog-post p:hover {
+            color: #23527c;
+        }
+    .blog-post img {
+        margin-right: 1em;
+    }
+
+.carousel-control {
+    background-image: none !important;
+    width: 5%;
+    color: #cbcbcb;
+    opacity: 1;
+    transition: .25s all;
+}
+    .carousel-control:hover {
+        color: #000;
+    }
+    .carousel-control .glyphicon {
+        text-shadow: none !important;
+        font-size: 1.5em;
+    }
+
+.carousel-farmer-blogs-desktop {
+    display: block;
+}
+.carousel-farmer-blogs-mobile {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .carousel-farmer-blogs-desktop {
+        display: none;
+    }
+
+    .carousel-farmer-blogs-mobile {
+        display: block;
+    }
+        .carousel-farmer-blogs-mobile .carousel-control {
+            width: 8%;
+        }
+        .carousel-farmer-blogs-mobile .blog-post {
+            padding: 0 35px;
+        }
+}
+
+.pipe {
+    color: #d4d4d4;
+    margin: 0 .25em;
+}
+#legal p {
+    font-size: 12px;
+    line-height: 14px;
+}
+@media screen and (max-width: 768px) {
+    #map img {
+        display: block;
+        margin: 0 auto;
+    }
+    .farmer-row {
+        padding: 1em 0;
+    }
+    .farmer-desc {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media screen and (max-width: 600px) {
+    .blog-post img {
+        width: 58%;
+    }
+}
